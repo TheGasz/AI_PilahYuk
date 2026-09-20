@@ -39,36 +39,29 @@ Tahapan yang dijalankan di dalam *script* ini meliputi:
 
 ---
 
-## 3. Persiapan Pelatihan SigLIP di Colab (`siglip_training_colab.ipynb`)
-Sebagai tahap lanjutan, *notebook* `siglip_training_colab.ipynb` dikembangkan untuk mengeksekusi pelatihan model (*training*) yang sesungguhnya. *Notebook* ini disiapkan dengan anggapan bahwa data bersih dan folder hasil pra-pemrosesan telah diunggah ke Google Drive.
+## 3. Pelatihan dengan Strategi *Embedding Probe* di Colab (`siglip_embedding_probe_colab (1).ipynb`)
+Sebagai tahap lanjutan, *notebook* lama telah diganti dengan versi pembaruan (`siglip_embedding_probe_colab (1).ipynb`) yang menggunakan strategi **Embedding Probe (2 Tahap)**. Strategi ini jauh lebih cepat dan sangat hemat memori karena meniadakan pemanggilan *backbone* SigLIP secara berulang di setiap *epoch*. *Notebook* ini disiapkan dengan anggapan bahwa data bersih hasil pra-pemrosesan telah diunggah ke Google Drive.
 
-Fitur utama pada *pipeline* pelatihan ini meliputi:
-1. **Arsitektur Model**:
-   - Menggunakan *checkpoint* `google/siglip-so400m-patch14-384`.
-   - Hanya mengambil *vision encoder* (membuang bagian teks) dan menempelkan *classification head* berupa Multi-Layer Perceptron (MLP) berlapis tunggal (Linear → GELU → Dropout → Linear).
-   - Opsi pembekuan tulang punggung (*freeze backbone*) sehingga hanya melatih beban di *classification head* (menghemat VRAM dan jauh lebih stabil pada data latih yang tidak terlalu besar).
-2. **Pipeline Dataloader Khusus SigLIP**:
-   - Pembuatan kelas `WasteDataset` di PyTorch yang memuat gambar (*on-the-fly*).
-   - Augmentasi PIL diterapkan di DataLoader (hanya pada bagian latih / *train*), yang dirancang untuk memperkaya keragaman gambar secara langsung di memori.
-   - Data dilempar ke `SiglipImageProcessor` untuk dipotong/diperbesar (resize) menjadi *384x384* dan dinormalisasi menjadi skala `[-1, 1]`, menghindari pemakaian normalisasi ImageNet tradisional.
-3. **Optimasi Berbasis Performa & Memori (GPU Keterbatasan Colab)**:
-   - Menggunakan optimasi **Mixed Precision Training (AMP)** via `torch.cuda.amp.autocast` dan `GradScaler`. AMP mengurangi penggunaan VRAM yang sangat krusial saat bekerja dengan SigLIP berparameter besar (`so400m`) di Colab GPU (T4).
-   - Mendukung penggunaan dua variasi fungsi *Loss*: Cross-Entropy standar yang berbobot (*weighted*) atau Focal Loss (untuk *imbalance* yang parah).
-4. **Mekanisme Anti-Kehilangan Data & Overfitting**:
-   - **Early Stopping**: Pengecekan otomatis performa. Menghentikan siklus *epoch* bila nilai *loss* validasi berhenti menurun selama sekian *epoch*.
-   - **Checkpointing Periodik**: Menyimpan *state* model, pengoptimal (*optimizer*), penjadwal (*scheduler*), dan `GradScaler` ke Google Drive per N *epoch*.
-   - **Sinkronisasi History**: Menulis semua kurva metrik (*train/val loss/acc*) ke dalam *file* JSON (`training_history.json`) di GDrive sehingga riwayat kurva dapat dilanjutkan saat *session disconnect*.
-5. **Pemantauan Kualitas Terperinci (*Granular Tracking*)**:
-   - Pengecekan otomatis *sanity check* secara visual dengan mem-plot perbandingan gambar sebelum dan sesudah augmentasi untuk memastikan transformasinya wajar.
-   - Melacak performa khusus setiap kelas (F1, Precision, Recall) dari dalam siklus per *epoch* dengan fokus pada parameter `Recall B3`.
-6. **Ekstraksi Fitur/Embedding Lanjutan**:
-   - Modul `extract_embeddings` disediakan di akhir *notebook* yang akan melewatkan setiap dataset pada *vision encoder* untuk mendapatkan vektor `1152-dimensi`.
-   - Vektor-vektor ini disimpan menjadi wujud array bertipe `.npz` (misal: `embeddings_train.npz`). Ini ditujukan sebagai aset analisis tingkat lanjut (seperti pengelompokan K-Means, visualisasi kluster memakai algoritma UMAP, ataupun klasifikasi metode hibrida).
+Alur eksekusi pada *pipeline* ini dibagi menjadi 2 tahap utama:
+
+**Tahap 1: Ekstraksi Embedding (Dijalankan Sekali)**
+- Menggunakan *checkpoint* `google/siglip-so400m-patch14-384`.
+- **Dataset Multi-View**: Tiap gambar dibaca sekali, kemudian diubah menjadi `1 + N_AUG` *view* (1 versi asli/bersih, ditambah sejumlah *view* teraugmentasi secara acak khusus untuk set *train*). Kelas `B3` mendapat porsi augmentasi yang lebih agresif.
+- **Ekstraksi Fitur Lanjutan**: Melakukan inferensi seluruh gambar (dan versi augmentasinya) melalui *frozen vision encoder* SigLIP untuk menghasilkan vektor `1152-dimensi`.
+- **Penyimpanan Lokal (.npz)**: Kumpulan vektor (*embedding*) ini langsung disimpan ke Google Drive sebagai *file* berformat `.npz` (`embeddings_train.npz`, `embeddings_val.npz`, `embeddings_test.npz`). Jika sesi Colab terputus, ekstraksi ini tidak perlu diulang dari awal.
+- **Sanity Check**: Disediakan modul untuk mem-plot perbandingan gambar sebelum dan sesudah augmentasi secara visual sebelum ekstraksi berjalan, guna memastikan wajarnya transformasi.
+
+**Tahap 2: Pelatihan *Classifier Head***
+- **Bebas Komputasi Berat**: Tahap ini murni melatih jaringan *head* di atas sekumpulan vektor (tanpa perlu memanggil SigLIP maupun membaca *file* gambar secara manual lagi). Ini membuat waktu *training* dalam satu *epoch* selesai dalam hitungan detik.
+- **Arsitektur *Head***: Dapat berupa MLP (Linear → GELU → Dropout → Linear) yang ringan.
+- **Mekanisme Pelatihan Andal**: Tetap didukung oleh bobot kelas (*Class Weights*) untuk komputasi *loss*, *Early Stopping* berbasis *validation loss*, serta penyimpanan *checkpoint* model terbaik (berikut sinkronisasi riwayat *training* berformat JSON) ke Google Drive.
+- **Pemantauan Kualitas Terperinci**: Melacak *Recall*, *Precision*, dan *F1-score* untuk masing-masing kelas secara berkesinambungan per *epoch* (dengan fokus prioritas pada *Recall B3*).
+- **Fleksibilitas (*Swap Classifier*)**: Karena *embedding* sudah terekstrak di memori, di sesi akhir *notebook* diberikan implementasi instan bagaimana *head* berbasis *Neural Network* bisa ditukar/dibandingkan dengan metode *Machine Learning* klasik, misalnya menggunakan `LogisticRegression` berbobot seimbang (`class_weight='balanced'`) dari Scikit-Learn.
 
 ---
 
 ## 4. Penutup & Status Pengerjaan Terkini
-Kedua file implementasi kode di atas (`preprocessing_lokal.ipynb` dan `siglip_training_colab.ipynb`) telah selesai diuji sintaksnya (*linted and validated*) lalu di-commit pada sistem manajemen versi (Git).
+Kedua file implementasi kode di atas (`preprocessing_lokal.ipynb` dan `siglip_embedding_probe_colab (1).ipynb`) telah disiapkan untuk menjalankan seluruh siklus pemrosesan data dan pemodelan secara menyeluruh.
 
 - **Total File Notebook Dihasilkan**: 2
 - **Posisi Branch**: `Data_Preprocessing`
