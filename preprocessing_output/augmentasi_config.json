@@ -1,0 +1,68 @@
+{
+  "note": "Augmentasi dieksekusi on-the-fly di DataLoader Colab, bukan di preprocessing lokal.",
+  "apply_only_on_split": "train",
+  "augmentasi_umum": [
+    {
+      "transform": "RandomHorizontalFlip",
+      "p": 0.5
+    },
+    {
+      "transform": "RandomVerticalFlip",
+      "p": 0.2
+    },
+    {
+      "transform": "ColorJitter",
+      "brightness": 0.2,
+      "contrast": 0.2,
+      "saturation": 0.1,
+      "hue": 0.05
+    },
+    {
+      "transform": "RandomResizedCrop",
+      "size": 384,
+      "scale": [
+        0.8,
+        1.0
+      ]
+    }
+  ],
+  "augmentasi_B3_ekstra": [
+    {
+      "transform": "RandomHorizontalFlip",
+      "p": 0.5
+    },
+    {
+      "transform": "RandomVerticalFlip",
+      "p": 0.3
+    },
+    {
+      "transform": "RandomRotation",
+      "degrees": 30
+    },
+    {
+      "transform": "ColorJitter",
+      "brightness": 0.4,
+      "contrast": 0.4,
+      "saturation": 0.2,
+      "hue": 0.1
+    },
+    {
+      "transform": "RandomResizedCrop",
+      "size": 384,
+      "scale": [
+        0.7,
+        1.0
+      ]
+    },
+    {
+      "transform": "RandomGrayscale",
+      "p": 0.05
+    }
+  ],
+  "urutan_pipeline": [
+    "1. Load gambar PIL",
+    "2. Terapkan augmentasi (jika split=train)",
+    "3. SiglipImageProcessor (resize 384x384, normalize ke [-1,1])",
+    "4. Output tensor pixel_values untuk model"
+  ]
+}

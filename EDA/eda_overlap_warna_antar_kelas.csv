@@ -1,0 +1,10 @@
+kelas_a,kelas_b,channel,histogram_intersection,jarak_bhattacharyya,korelasi,overlap_tinggi
+Recylable,Organik,hue,1.5697,0.1984,0.8561,True
+Recylable,Organik,saturation,2.0641,0.2043,0.9626,True
+Recylable,Organik,value,2.8441,0.0583,0.9855,True
+Recylable,B3,hue,1.6917,0.1157,0.9521,True
+Recylable,B3,saturation,1.8188,0.1047,0.9847,True
+Recylable,B3,value,2.1011,0.1194,0.9561,True
+Organik,B3,hue,1.3127,0.2684,0.6929,True
+Organik,B3,saturation,1.6395,0.262,0.9771,True
+Organik,B3,value,2.0597,0.161,0.9188,True
