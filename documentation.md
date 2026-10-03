@@ -8,7 +8,7 @@ Dokumen ini berisi rekam jejak pekerjaan, alur pemrosesan data, serta spesifikas
 - Menginisialisasi repositori Git lokal di dalam *workspace* proyek (`d:\UGM\Semester 5\Senpro\Project\Senpro`).
 - Membuat dan menggunakan *branch* `Data_Preprocessing` untuk memisahkan pekerjaan pembersihan data dan pembuatan *script* dari struktur utama (*main*).
 - Menjalankan inspeksi awal pada folder `Dataset` yang memiliki tiga kelas: `0_Recylable`, `1_Organik`, dan `2_B3`.
-- Menganalisis berkas hasil Exploratory Data Analysis (EDA) sebelumnya yang berada di folder `EDA/` (`eda_kualitas_gambar.csv`, `eda_properti_teknis.csv`, dll.) untuk memahami masalah yang ada (seperti duplikat identik, resolusi rendah, dan ketidakseimbangan kelas).
+- Menganalisis berkas hasil Exploratory Data Analysis (EDA) sebelumnya yang berada di folder `EDA/` (`eda_kualitas_gambar.csv`, `eda_properti_teknis.csv`, `eda_duplikat_identik.csv`, dll.) untuk memahami karakteristik dataset. Pada tahap EDA ini, ditemukan ~1000 file duplikat identik, variasi format warna, resolusi gambar yang sangat bervariasi, serta masalah ketidakseimbangan (imbalance) antarkelas (terutama pada kelas B3).
 
 ---
 
@@ -19,8 +19,8 @@ Tahapan yang dijalankan di dalam *script* ini meliputi:
 1. **Deduplikasi Gambar**: 
    - Melakukan deteksi gambar ganda menggunakan dua metode *hashing*: MD5 untuk byte mentah file dan SHA256 untuk pixel RGB.
    - Menyimpan gambar dengan resolusi tertinggi sebagai perwakilan (representatif) grup duplikat.
-   - Memindahkan sisa file duplikat ke dalam folder `Dataset/duplicates_removed` agar data mentah tidak hilang namun tidak ikut dilatih.
-   - Menyimpan log duplikasi di `dedup_log.csv`.
+   - Memindahkan secara fisik 515 file duplikat (hasil run lokal) ke dalam folder `Dataset/duplicates_removed` agar data mentah tidak hilang namun tidak ikut dilatih dan menghindari *data leakage*.
+   - Menyimpan log duplikasi lengkap di `dedup_log.csv`.
 2. **Filter Kualitas & Standardisasi Format**:
    - Membuang gambar yang rusak (*corrupt*) dan yang resolusinya terlalu kecil (di bawah 50x50 piksel).
    - Mengubah paksa (*convert in-place*) gambar dengan format non-RGB (seperti RGBA, Grayscale, atau CMYK) menjadi format RGB standar.
@@ -33,14 +33,14 @@ Tahapan yang dijalankan di dalam *script* ini meliputi:
    - Memastikan tidak ada data yang *overlap* antarfase.
    - Menghasilkan *file manifest* (`train.csv`, `val.csv`, `test.csv`) yang menggunakan *path* relatif (memakai *forward slash* `/`) sehingga portabel ketika diunggah ke *platform* Linux/Google Drive.
 5. **Konfigurasi Augmentasi**: 
-   - Mendefinisikan resep augmentasi (terutama augmentasi yang lebih agresif untuk kelas minoritas `B3` guna menghindari *overfitting*). Resep ini disimpan di `augmentasi_config.json` sebagai rujukan untuk DataLoader.
+   - Mendefinisikan resep augmentasi (terutama augmentasi yang lebih agresif untuk kelas minoritas `B3` guna menghindari *overfitting*). Resep ini disimpan di `augmentasi_config.json` sebagai rujukan untuk DataLoader. Konsep utamanya adalah **augmentasi acak HANYA diterapkan pada data Train**, sedangkan **Val dan Test murni (tanpa augmentasi)** untuk mencegah *data leakage* dan menjaga keabsahan evaluasi metrik.
 
-**Status**: Tahap ini *telah berhasil dieksekusi* oleh pengguna. Folder keluaran `preprocessing_output` telah terbuat beserta isi-isinya.
+**Status**: Tahap ini *telah berhasil dieksekusi* oleh pengguna. Sebanyak 515 gambar duplikat telah dipindahkan, dan folder keluaran `preprocessing_output` telah terbuat beserta isi-isinya.
 
 ---
 
-## 3. Pelatihan dengan Strategi *Embedding Probe* di Colab (`siglip_embedding_probe_colab (1).ipynb`)
-Sebagai tahap lanjutan, *notebook* lama telah diganti dengan versi pembaruan (`siglip_embedding_probe_colab (1).ipynb`) yang menggunakan strategi **Embedding Probe (2 Tahap)**. Strategi ini jauh lebih cepat dan sangat hemat memori karena meniadakan pemanggilan *backbone* SigLIP secara berulang di setiap *epoch*. *Notebook* ini disiapkan dengan anggapan bahwa data bersih hasil pra-pemrosesan telah diunggah ke Google Drive.
+## 3. Pelatihan dengan Strategi *Embedding Probe* di Colab (`siglip_embedding_probe_colab.ipynb`)
+Sebagai tahap lanjutan, *notebook* telah diperbarui ke versi `siglip_embedding_probe_colab.ipynb` yang menggunakan strategi **Embedding Probe (2 Tahap)**. Strategi ini jauh lebih cepat dan sangat hemat memori karena meniadakan pemanggilan *backbone* SigLIP secara berulang di setiap *epoch*. *Notebook* ini disiapkan dengan anggapan bahwa data bersih hasil pra-pemrosesan telah diunggah ke Google Drive.
 
 Alur eksekusi pada *pipeline* ini dibagi menjadi 2 tahap utama:
 
@@ -61,7 +61,7 @@ Alur eksekusi pada *pipeline* ini dibagi menjadi 2 tahap utama:
 ---
 
 ## 4. Penutup & Status Pengerjaan Terkini
-Kedua file implementasi kode di atas (`preprocessing_lokal.ipynb` dan `siglip_embedding_probe_colab (1).ipynb`) telah disiapkan untuk menjalankan seluruh siklus pemrosesan data dan pemodelan secara menyeluruh.
+Kedua file implementasi kode di atas (`preprocessing_lokal.ipynb` dan `siglip_embedding_probe_colab.ipynb`) telah disiapkan untuk menjalankan seluruh siklus pemrosesan data dan pemodelan secara menyeluruh.
 
 - **Total File Notebook Dihasilkan**: 2
 - **Posisi Branch**: `Data_Preprocessing`
