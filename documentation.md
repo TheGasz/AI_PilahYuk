@@ -58,6 +58,16 @@ Alur eksekusi pada *pipeline* ini dibagi menjadi 2 tahap utama:
 - **Pemantauan Kualitas Terperinci**: Melacak *Recall*, *Precision*, dan *F1-score* untuk masing-masing kelas secara berkesinambungan per *epoch* (dengan fokus prioritas pada *Recall B3*).
 - **Fleksibilitas (*Swap Classifier*)**: Karena *embedding* sudah terekstrak di memori, di sesi akhir *notebook* diberikan implementasi instan bagaimana *head* berbasis *Neural Network* bisa ditukar/dibandingkan dengan metode *Machine Learning* klasik, misalnya menggunakan `LogisticRegression` berbobot seimbang (`class_weight='balanced'`) dari Scikit-Learn.
 
+**Pembaruan v2 (`RUN_NAME = mlp_head_v2_ce_ls_mixup`)** – hasil audit skill `methodology-fault-fixer`, `model-performance-advisor`, dan `embedding-data-diagnostics`:
+- **Class weight efektif** (`CLASS_WEIGHT_MODE='effective'`): rumus `N/(C*N_c)` dihitung dari jumlah *baris* train `.npz`. Sebelumnya bobot B3 (2.90, dari jumlah gambar) ditumpuk dengan oversampling `N_AUG` B3=5, sehingga total kontribusi loss B3 ~2x kelas lain. Kini B3 ≈ 1.6, Recylable ≈ 0.87, Organik ≈ 0.82 (perkiraan dari 70.599 baris).
+- **Loss**: default CrossEntropy + *label smoothing* 0.05 (Focal opsional). Bug Focal Loss diperbaiki: `pt` kini dari CE tanpa bobot.
+- **Mixup di ruang embedding** (`MIXUP_ALPHA=0.2`) untuk generalisasi.
+- **Diagnostik data (Cell 12b/12c)**: prediksi OOF `StratifiedGroupKFold` (group `orig_idx`, standardisasi per fold), kandidat label noise (confident learning + kNN), near-duplicate lintas split, sampel ambigu, outlier centroid. CSV ditulis ke `ROOT/data_diagnostics/<embedding>/`; kolom `keputusan` diisi manual, lalu `TRAIN_EXCLUDE_CSV` dipakai untuk eksperimen cepat (hanya train). Perbaikan permanen tetap lewat `preprocessing_lokal.ipynb` + re-ekstrak embedding.
+- **Evaluasi jujur**: kolom `macro_F1_nodup`/`recall_B3_nodup` (val tanpa near-duplicate train) dan macro F1 OOF sebagai estimasi generalisasi kedua.
+- **Test sekali**: `mark_test_use()` memberi peringatan bila test dilihat untuk lebih dari satu model; error analysis dipindah dari test ke **val**.
+- **SVM**: `C` dipilih dari `SVM_C_GRID` via val; ensemble baru `ens_lintas_model` (MLP multi-seed + kNN + SVM).
+- Konfigurasi tiap run disimpan ke `run_config_<RUN_NAME>.json`.
+
 ---
 
 ## 4. Penutup & Status Pengerjaan Terkini
