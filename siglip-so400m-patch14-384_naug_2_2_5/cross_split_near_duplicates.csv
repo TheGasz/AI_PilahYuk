@@ -1,0 +1,120 @@
+split,label,path,match_split,match_label,match_path,cosine,label_konflik
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_72.png,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_41.png,1.0,False
+test,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/Image_184.png,train,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/Image_115.png,0.9999,False
+test,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/Image_34.png,train,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/Image_113.png,0.9997,False
+test,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/Image_45.png,train,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/Image_78.png,0.9997,False
+test,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_51.png,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_36.png,0.9995,False
+test,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_23.png,val,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_49 (1).png,0.9995,False
+val,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/Image_199.png,train,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/Image_111.png,0.9993,False
+val,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/Image_245.png,train,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/Image_226.png,0.9992,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_113.png,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_139.png,0.9992,False
+val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_246.png,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_187.png,0.9991,False
+val,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_198 (1).png,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_200 (1).png,0.999,False
+val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_159.png,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_40.png,0.9988,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_124.png,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_224.png,0.9986,False
+test,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/R_3774.jpg,val,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/R_3628.jpg,0.9983,False
+val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_30.png,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_109.png,0.9982,False
+val,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_141.png,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_208.png,0.9982,False
+val,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/Image_97.png,train,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/Image_101.png,0.9974,False
+val,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_229 (1).png,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_31.png,0.9974,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_135.png,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_52.png,0.9974,False
+val,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_33.png,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_3 (1).png,0.9973,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_142.png,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_22.png,0.9973,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_6.png,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_121.png,0.9972,False
+val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_32.png,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_195.png,0.9971,False
+val,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_198.png,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_168.png,0.9971,False
+test,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/trash254.jpg,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/trash559.jpg,0.9971,False
+val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_5437.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_5351.jpg,0.9966,False
+test,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_183.png,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_218.png,0.9965,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_10140.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_6769.jpg,0.9965,False
+val,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/Image_105.png,train,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/Image_169.png,0.9964,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_65.png,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_34.png,0.9964,False
+test,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_192.png,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_115 (1).png,0.9964,False
+val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_2055.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_6334.jpg,0.9961,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_16.png,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_186.png,0.9961,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_196.png,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_127.png,0.9958,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_10388.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/biological456.jpg,0.9958,False
+val,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_100.png,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_32.png,0.9957,False
+val,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_248 (1).png,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_31.png,0.9952,False
+val,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_48.png,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_161.png,0.995,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_10980.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_12.jpg,0.9949,False
+test,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/R_1391.jpg,train,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/R_211.jpg,0.9948,False
+test,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/R_9012.jpg,train,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/R_8908.jpg,0.9947,False
+test,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_23.png,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_53.png,0.9945,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_95.png,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_22.png,0.9945,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_141.png,val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_27.png,0.9944,False
+val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_7675.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_12290.jpg,0.9941,False
+test,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_55.png,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_124.png,0.9941,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_12418.jpg,val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/biological517.jpg,0.9938,False
+val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/biological294.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_10295.jpg,0.9937,False
+val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_193.png,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_38.png,0.9937,False
+val,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_49 (1).png,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_53.png,0.9936,False
+val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_9655.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_7309.jpg,0.9934,False
+val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_100.png,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_205.png,0.9934,False
+test,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/tabletcapsule (67).jpg,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/tabletcapsule (61).jpg,0.9932,False
+val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_118.png,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_146.png,0.9928,False
+test,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_170.png,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_196 (1).png,0.9927,False
+test,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_96.png,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_114.png,0.9927,False
+val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_6537.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_6625.jpg,0.9919,False
+test,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_237.png,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_36.png,0.9916,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_8237.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_8404.jpg,0.9913,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_157.png,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_56.png,0.991,False
+test,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_15.png,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_77.png,0.9909,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_3.png,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_34.png,0.9908,False
+val,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_47.png,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_69.png,0.9906,False
+val,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_180.png,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_98.png,0.9905,False
+val,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_2.png,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_69.png,0.9904,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_9482.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/biological125.jpg,0.9901,False
+val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_3627.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_10024.jpg,0.9899,False
+val,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/R_9598.jpg,train,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/R_9779.jpg,0.989,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_10152.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/biological394.jpg,0.9884,False
+val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_7390.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_12411.jpg,0.9881,False
+val,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_222.png,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_126.png,0.9881,False
+val,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/tabletcapsule (112).jpg,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/tabletcapsule (293).jpg,0.9879,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_1852.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_1762.jpg,0.9879,False
+test,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/tabletcapsule (350).jpg,val,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/tabletcapsule (349).jpg,0.9878,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_36.png,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_78.png,0.9877,False
+val,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_153.png,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_41.png,0.9871,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_250.png,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_161.png,0.9871,False
+val,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/R_8514.jpg,train,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/R_8754.jpg,0.9858,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_9585.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_7429.jpg,0.9856,False
+test,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/R_9219.jpg,train,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/R_9238.jpg,0.9854,False
+val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_7107.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_7239.jpg,0.9848,False
+test,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/Image_173.png,train,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/Image_192.png,0.9844,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_90.png,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_208.png,0.9843,False
+test,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_216 (1).png,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_243.png,0.9841,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_3050.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_3251.jpg,0.984,False
+val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_64.png,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_2.png,0.9837,False
+val,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/trash234.jpg,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/trash250.jpg,0.9832,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_196.png,val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_64.png,0.9831,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_87.png,val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_45.png,0.9818,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_119.png,val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_45.png,0.9815,False
+val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_5848.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_5891.jpg,0.9814,False
+test,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/R_4329.jpg,train,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/R_4419.jpg,0.9814,False
+val,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_63.png,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_69.png,0.9806,False
+val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_8203.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_8249.jpg,0.98,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_143.png,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/Image_46.png,0.9796,False
+val,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/R_3276.jpg,train,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/R_3251.jpg,0.9789,False
+val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_206.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_10575.jpg,0.9789,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/biological364.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_10141.jpg,0.9785,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_7189.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_7046.jpg,0.9781,False
+val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_10280.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/biological720.jpg,0.978,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_10584.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_10604.jpg,0.9775,False
+val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_7134.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_7239.jpg,0.9773,False
+val,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/R_6776.jpg,train,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/R_6369.jpg,0.9773,False
+test,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/trash315.jpg,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/trash147.jpg,0.977,False
+val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/biological865.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/biological410.jpg,0.9757,False
+val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_10798.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_10755.jpg,0.9754,False
+test,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/R_6827.jpg,train,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/R_6474.jpg,0.975,False
+test,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/trash338.jpg,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/trash349.jpg,0.9749,False
+val,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_158.png,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_93.png,0.9745,False
+val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_8785.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_8743.jpg,0.9744,False
+test,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_65.png,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/Image_91.png,0.9743,False
+val,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/R_3797.jpg,train,Recylable,/content/drive/MyDrive/Senpro/Dataset/0_Recylable/R_3781.jpg,0.9727,False
+test,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/58da882e53.jpg,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/9cbed4d1d8.jpg,0.9727,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_8503.jpg,val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_8389.jpg,0.9721,False
+test,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/trash17.jpg,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/trash696.jpg,0.9713,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_5526.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_5564.jpg,0.9707,False
+val,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/trash344.jpg,train,B3,/content/drive/MyDrive/Senpro/Dataset/2_B3/trash259.jpg,0.9703,False
+val,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_4707.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_12547.jpg,0.9702,False
+test,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_1780.jpg,train,Organik,/content/drive/MyDrive/Senpro/Dataset/1_Organik/O_1912.jpg,0.9702,False
