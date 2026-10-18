@@ -1,0 +1,24 @@
+{
+  "run_name": "mlp_head_v2_ce_ls_mixup",
+  "embedding_dir": "/content/drive/MyDrive/Senpro/embeddings/siglip-so400m-patch14-384_naug_2_2_5",
+  "input_norm": "standardize",
+  "class_weight_mode": "effective",
+  "class_weights": [
+    0.8657249212265015,
+    0.8154192566871643,
+    1.6167216300964355
+  ],
+  "loss": "ce",
+  "focal_gamma": 2.0,
+  "label_smoothing": 0.05,
+  "mixup_alpha": 0.2,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "dropout": 0.3,
+  "batch_size": 256,
+  "epochs": 60,
+  "patience": 8,
+  "train_exclude_csv": null,
+  "n_train_rows": 70599,
+  "seed": 42
+}

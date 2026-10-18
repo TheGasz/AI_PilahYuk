@@ -1,0 +1,13 @@
+{
+  "model": "ens_lintas_model",
+  "bias_R_O_B3": [
+    -0.3,
+    0.05,
+    0.0
+  ],
+  "val_macro_f1_base": 0.9913433163120664,
+  "val_macro_f1_p2": 0.9922496608510817,
+  "test_macro_f1_base": 0.9935770057637402,
+  "test_macro_f1_p2": 0.9928404691978531,
+  "tune_b3": false
+}

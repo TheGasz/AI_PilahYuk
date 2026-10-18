@@ -1,2 +1,8 @@
 Archive/
 Dataset/
+# transient notebook backup created during Bagian C edits (task 2.x); not committed
+*.ipynb.bak
+
+# Python cache
+__pycache__/
+*.pyc
