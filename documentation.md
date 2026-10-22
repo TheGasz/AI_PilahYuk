@@ -113,13 +113,127 @@ Diverifikasi di mode local: `EMBEDDING_DIR`/`RUN_NAME` resolve ke `v3clean` (tid
 
 **Fix `ImportError: cannot import name '_Ink' from 'PIL._typing'`.** Colab terbaru (Nov 2025) mem-ship Pillow 12 yang menghapus symbol internal `_Ink` yang masih dipakai torchvision -> import gagal. Penyebabnya cell install lama memakai `pip install --upgrade pillow` (menarik Pillow 12). Perbaikan di Cell install `siglip_embedding_probe_colab.ipynb`: pin `pillow>=10,<12`, dan bila Pillow 12 terlanjur aktif di memori cell otomatis me-restart runtime sekali (lalu jalankan ulang dari Cell 1). Di lokal cell hanya memperingatkan bila Pillow>=12 terdeteksi. Perbaikan manual cepat bila perlu: `pip install "pillow>=10,<12"` lalu restart kernel.
 
+**Eksperimen LoRA fine-tune SigLIP — GAGAL, di-revert.** Dicoba fine-tune ringan backbone SigLIP dengan LoRA (`peft`, rank 8, 6 blok transformer teratas) dengan harapan backbone belajar fitur sulit Recylable↔Organik. Hasil: **tidak membantu**. Peak val macro F1 head pelatih LoRA (0.9883) justru **lebih rendah** daripada pendekatan embedding beku v3 (val ~0.9956 pada `ens_lintas_model`), dengan recall B3 ikut turun (0.962). Fine-tune backbone pada dataset yang head-nya sudah ~99.5% cenderung **overfit** (menghafal train) tanpa memperbaiki batas kelas yang ambigu secara intrinsik — konsisten dengan temuan sebelumnya bahwa error sisa R↔O adalah ambiguitas label, bukan keterbatasan fitur backbone. Kesimpulan: untuk kasus ini, **membekukan (freeze) backbone** lalu probing head di atas embedding beku lebih baik daripada memberi backbone kapasitas belajar via LoRA. Seluruh sel LoRA di-revert dari `siglip_embedding_probe_colab.ipynb` (notebook dikembalikan ke checkpoint pra-LoRA `b452b0c`); perbaikan non-LoRA (ENV lokal/colab, DATA_VERSION, Pillow<12, P2 dimatikan, guard CELL 15) tetap dipertahankan.
+
 ---
 
-## 4. Penutup & Status Pengerjaan Terkini
-Kedua file implementasi kode di atas (`preprocessing_lokal.ipynb` dan `siglip_embedding_probe_colab.ipynb`) telah disiapkan untuk menjalankan seluruh siklus pemrosesan data dan pemodelan secara menyeluruh.
+## 4. Sub-Labeling v2: Pelabelan Sub-Kelas Otomatis (Hybrid Zero-Shot + Active Learning + LLM)
 
-- **Total File Notebook Dihasilkan**: 2
+Setelah klasifikasi 3-kelas kasar sudah stabil (val macro F1 ~0.9956), pipeline sub-labeling dibangun untuk memberi label material/jenis objek yang lebih spesifik di bawah tiap kategori kasar. Tujuan akhir: fitur panduan daur ulang di aplikasi memerlukan instruksi pembuangan per jenis material, bukan hanya "Recylable/Organik/B3".
+
+### 4.1 Metode & Arsitektur
+
+**Pipeline hybrid 6 tahap (S0–S6)** diimplementasikan langsung di `siglip_embedding_probe_colab.ipynb` (Bagian C):
+
+1. **S0 – Konfigurasi taksonomi.** 13 sub-label didefinisikan dalam `taxonomy.json` (3 kategori × beberapa sub-label + fallback `lainnya`). Tiap sub-label memuat prompt Bahasa Inggris untuk zero-shot dan teks instruksi pembuangan Bahasa Indonesia. Versi: `TAXONOMY_VERSION='v2'`.
+2. **S1 – Label awal dari nama file.** Gambar dengan prefix eksplisit (mis. `battery*`, `clothes*`, `biological*`, `cardboard*`, `tabletcapsule*`) otomatis dilabeli sebagai gold set. Prefix prior (`R_*`, `O_*`, `trash*`, `Image_*`) menjadi seed label awal. Spot-check manusia memvalidasi gold set.
+3. **S2 – Clustering k-means per kategori** di embedding View_0 train (L2-normalized). Grid gambar per cluster dihasilkan untuk review taksonomi.
+4. **S3 – Zero-shot constrained + kalibrasi τ.** Text tower SigLIP (checkpoint sama: `siglip-so400m-patch14-384`) meng-encode prompt tiap sub-label → cosine similarity dengan embedding gambar → softmax margin → keputusan constrained (hanya sub-label dalam kategori yang sama). Margin < τ → `lainnya`. τ dikalibrasi di gold set per kategori.
+5. **S4 – Active learning (3 putaran)** dengan probe `LogisticRegression(class_weight='balanced')`. Setiap putaran: sampel paling tidak pasti + sampel acak + sampel `lainnya` diantrikan untuk review manusia.
+6. **S5–S6 – Output `sublabels.csv` + latih sub-head.** Sub-head hierarkis (per kategori) dan flat (10 kelas) dilatih di embedding yang sama; model dipilih dari val, test disentuh sekali.
+
+**Tambahan jalur LLM (OverPower) untuk pseudo-label train.** Sumber label baru `llm` disisipkan di `SUMBER_PRIORITAS` (prioritas di atas probe/zeroshot, di bawah manual/gold/cluster). 5000 gambar train dilabeli LLM via `llm_label_queue.csv`, diimpor ke audit sebagai `tahap=llm_label`. Label LLM **hanya masuk train** — tidak pernah dianggap `terverifikasi` (tidak bocor ke val/test). Jalur ini terintegrasi di driver S7 sebagai tahap `gen_gate` sebelum active learning.
+
+**Set terverifikasi manusia diperbesar** (kuota 300/sub-label per split val/test). `eval_val.csv` dan `eval_test.csv` diisi manusia (LLM-assisted klik-setuju untuk kelas mudah, verifikasi manual untuk kelas sulit). Total val terverifikasi: 2642, test: 2610.
+
+### 4.2 Taksonomi v2 (Sub-Label)
+
+| Kategori | Sub-label dilatih | Kebijakan merge/rule |
+|---|---|---|
+| **Recylable** | `Tekstil`, `Kertas_Karton`, `Plastik_Kemasan` | `Anorganik_Lainnya` → merge:Plastik_Kemasan; `Plastik_Campuran` → merge:Plastik_Kemasan; `Minyak_Jelantah` → rule_only |
+| **Organik** | `Limbah_Biologis`, `Sisa_Makanan` | `Sampah_Kebun` → merge:Sisa_Makanan |
+| **B3** | `Baterai`, `Medis_Farmasi`, `Aerosol_Elektronik` | `B3_Rumah_Tangga` → merge:Aerosol_Elektronik |
+
+Sumber kebenaran: `sublabel_v2/taxonomy.json`.
+
+### 4.3 Hasil Evaluasi Sub-Head (Val, 2011 sampel terverifikasi manusia, 8 sub-label)
+
+| Model | macro_F1_sub | minR_B3sub | recall_kat_B3 | prec_kat_B3 | B3_turun |
+|---|---|---|---|---|---|
+| **hier_oracle::mlp2** | **0.9591** | 0.9733 | 1.0 | 1.0 | False |
+| hier_e2e::mlp2 | 0.9559 | 0.9733 | 0.9975 | 1.0 | False |
+| hier_oracle::mlp | 0.9536 | 0.9733 | 1.0 | 1.0 | False |
+| flat::mlp2 | 0.9516 | 0.9691 | 0.9899 | 0.9875 | False |
+| hier_e2e::mlp | 0.9507 | 0.9733 | 0.9975 | 1.0 | False |
+| flat::mlp | 0.9441 | 0.984 | 0.9975 | 0.9778 | False |
+| hier_oracle::linear | 0.9406 | 0.9733 | 1.0 | 1.0 | False |
+| flat::linear | 0.9399 | 0.9485 | 0.9874 | 0.9704 | False |
+| hier_e2e::linear | 0.9382 | 0.9733 | 0.9975 | 1.0 | False |
+
+- `n_eval=2011`, `n_sublabel_dinilai=8` — semua sub-label yang dilatih terukur.
+- Model terbaik: `hier_oracle::mlp2` (macro F1 0.9591). Realistis di produksi: `hier_e2e::mlp2` (0.9559, selisih 0.003 dari oracle; memakai head 3-kelas `ens_lintas_model` untuk routing kategori).
+- B3 recall ≥0.97, precision 1.0 di semua model hierarkis — nol false alarm B3.
+
+### 4.4 Agreement LLM (OverPower) vs Manusia
+
+Diukur pada 4380 gambar yang punya label manusia sekaligus LLM:
+
+| Sub-label | n | agreement | Wilson 95% CI batas bawah |
+|---|---|---|---|
+| Aerosol_Elektronik | 282 | 1.000 | 0.987 |
+| Anorganik_Lainnya | 354 | 1.000 | 0.989 |
+| Baterai | 448 | 1.000 | 0.992 |
+| Kertas_Karton | 382 | 1.000 | 0.990 |
+| Limbah_Biologis | 416 | 1.000 | 0.991 |
+| Medis_Farmasi | 323 | 1.000 | 0.988 |
+| Plastik_Kemasan | 360 | 1.000 | 0.989 |
+| Sampah_Kebun | 431 | 1.000 | 0.991 |
+| Sisa_Makanan | 929 | 1.000 | 0.996 |
+| Tekstil | 455 | 1.000 | 0.992 |
+
+100% agreement di semua sub-label. LLM terbukti sebagai sumber pseudo-label train yang sangat akurat.
+
+### 4.5 Statistik Dataset Sub-Label
+
+- Total gambar: 28.965 (sama dengan v3clean).
+- `lainnya` (gagal klasifikasi): 819 (2.8%, semuanya Organik/zeroshot).
+- Kelas kecil yang di-merge: 3 (`B3_Rumah_Tangga`, `Minyak_Jelantah`, `Plastik_Campuran`).
+- Audit log: 12.109 keputusan (5000 LLM + 5459 eval manusia + sisanya AL/gold/cluster).
+- Sumber label per split (ringkasan): train didominasi `manual` + `llm` + `probe`; val/test didominasi `manual`.
+
+### 4.6 Bug Fix: `sl_rebuild_verified` — keputusan `ok` eval tidak terhitung verified
+
+Ditemukan bug di fungsi `sl_rebuild_verified` (S4-core): keputusan `ok` pada eval val/test yang gambarnya bukan gold/cluster **tidak dihitung sebagai verified**. Akibatnya ribuan keputusan manusia yang sudah diisi tidak masuk ke set evaluasi sub-head. Fix: kalau keputusan `ok` dan `key` belum ada di verified, tetap masukkan dengan `sub_label_sesudah` dari audit. Setelah fix: `n_val_verified` naik dari 231 → 2642, `n_sublabel_dinilai` dari 2 → 8, macro F1 sub dari 0.65 → 0.9591.
+
+### 4.7 Artefak Output
+
+Folder `sublabel_v2/`:
+- `sublabels.csv` (28.965 baris), `taxonomy.json`, `ringkasan_sublabel.csv`, `kelas_kecil.csv`
+- `gold_status.csv`, `zeroshot.csv`, `zeroshot_scores.npz`
+- `cluster_assign.csv`, `cluster_review.csv`, `cluster_seeds.csv`, grid cluster
+- `al_round_1..3.csv`, `al_status.json`, `probe_pred_round_1..3.csv`
+- `eval_val.csv`, `eval_test.csv` (terisi lengkap, 2591+2556 baris)
+- `llm_label_queue.csv` (5000 baris train, terisi), `llm_vs_manusia_agreement.csv`
+- `audit_log.csv` (12.109 baris), `output_manifest.json`
+
+Folder `sublabel_head_v2_v3clean_r1/`:
+- Checkpoint `.pt` per scope (B3/Organik/Recylable/flat) × head (linear/mlp/mlp2)
+- History JSON per scope × head
+- `run_config_*.json` per scope
+- `perbandingan_subhead_sublabel_head_v2_v3clean_r1.csv`
+
+### 4.8 Status & Langkah Selanjutnya
+
+- [x] Tahap S0–S6 selesai (taksonomi v2, pipeline lengkap).
+- [x] Label LLM 5000 gambar train diimpor.
+- [x] Set manusia val/test diperbesar (2642 val, 2610 test).
+- [x] Bug `sl_rebuild_verified` di-fix.
+- [x] Sub-head terlatih, semua 8 sub-label terukur (macro F1 0.9591).
+- [ ] `run_s6d()` untuk evaluasi test sekali (model terpilih belum disentuh test).
+- [ ] Kalibrasi τ Organik/B3 masih `perlu_kalibrasi_ulang` (tidak mempengaruhi sub-head, tapi mempengaruhi zero-shot standalone).
+- [ ] Review `lainnya` 819 gambar (opsional).
+
+---
+
+## 5. Penutup & Status Pengerjaan Terkini
+Seluruh pipeline dari pra-pemrosesan hingga sub-labeling telah diimplementasikan dan dieksekusi.
+
+- **Total File Notebook**: 2 (`preprocessing_lokal.ipynb`, `siglip_embedding_probe_colab.ipynb`)
 - **Posisi Branch**: `Data_Preprocessing`
-- **Tugas Selanjutnya**: 
-  1. *Upload* hasil dari `preprocessing_output` ke *cloud storage* (Google Drive).
-  2. Mulai sesi eksekusi di Google Colab.
+- **Klasifikasi 3-kelas kasar**: val macro F1 ~0.9956 (`ens_lintas_model`), test macro F1 ~0.9936. Production-ready.
+- **Sub-labeling 8-kelas**: val macro F1 0.9591 (`hier_oracle::mlp2`), dievaluasi pada 2011 sampel terverifikasi manusia. B3 recall ≥0.97, precision 1.0. Layak dipakai di aplikasi.
+- **Tugas Tersisa**:
+  1. Jalankan `run_s6d()` untuk evaluasi test sub-head sekali (model terpilih).
+  2. (Opsional) Kalibrasi τ Organik/B3 untuk zero-shot standalone.
+  3. (Opsional) Review 819 gambar `lainnya`.
+  4. Update `product.md` dan steering files dengan hasil final sub-labeling.

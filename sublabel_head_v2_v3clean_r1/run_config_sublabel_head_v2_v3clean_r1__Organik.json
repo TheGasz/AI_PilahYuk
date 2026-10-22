@@ -1,0 +1,14 @@
+{
+  "scope": "Organik",
+  "classes": [
+    "Limbah_Biologis",
+    "Sisa_Makanan"
+  ],
+  "n_train": 24606,
+  "n_val_verified": 731,
+  "prop_verified": 0.3166300902218971,
+  "class_weight": {
+    "Limbah_Biologis": 3.7832103321033212,
+    "Sisa_Makanan": 0.5761449845462209
+  }
+}

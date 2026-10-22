@@ -1,0 +1,635 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1. [MANUSIA] Checkpoint persiapan sebelum implementasi": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638098758
+      }
+    ],
+    "2.1 Tambah cell markdown judul Bagian C + cell **S0a** (taksonomi dan parameter)": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638099421
+      },
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638116051
+      },
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638708065
+      }
+    ],
+    "2.2 Tambah cell **S0b**: helper I/O, penjaga tulis, gerbang, audit, shim": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638099547
+      },
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638718019
+      },
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791639096157
+      }
+    ],
+    "2.3 Parameterisasi fungsi 3-kelas di Cell 11-12 (dan `knn_probs` di Cell 16) secara backward-compatible + cell **SV-regresi**": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638099610
+      },
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791639105951
+      },
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791639823856
+      }
+    ],
+    "2.4 Tambah cell scaffold **SV-PBT** (property-based test di dalam notebook)": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638099671
+      },
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791639829409
+      },
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791639976691
+      }
+    ],
+    "2.5 Tulis property test untuk round-trip Taxonomy_Config": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638099727
+      },
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791639982977
+      },
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791640196010
+      }
+    ],
+    "2.6 Tulis property test untuk validasi taksonomi": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638099792
+      },
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791640200348
+      },
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791640432606
+      }
+    ],
+    "2.7 Tulis property test untuk hash kanonik": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638099859
+      },
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791640439787
+      },
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791640636567
+      }
+    ],
+    "2.8 Tulis property test untuk normalisasi kunci path": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638099912
+      },
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791640642770
+      },
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791640792467
+      }
+    ],
+    "2.9 Tulis property test untuk penjaga penulisan": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638099964
+      },
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791640797721
+      },
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791641018810
+      }
+    ],
+    "2.10 Tulis property test untuk penulisan Review_Queue yang aman": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638100050
+      },
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791641023529
+      },
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791641336147
+      }
+    ],
+    "2.11 Tulis property test untuk Audit_Log append-only": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638100105
+      },
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791641340859
+      }
+    ],
+    "2.12 Tulis property test untuk gerbang prasyarat dan antrian": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638100156
+      }
+    ],
+    "2.13 Tulis property test untuk kompatibilitas mundur metrik dan isolasi registry": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638100208
+      }
+    ],
+    "3. Checkpoint S0": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638100261
+      }
+    ],
+    "4.1 Tambah cell markdown S1 + cell **S1a** (`run_s1a`) dan cell **SV-S1a**": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638100315
+      }
+    ],
+    "4.2 Tulis property test untuk `di_luar_manifest`": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638100364
+      }
+    ],
+    "4.3 Tambah cell **S1b** (`sl_classify_filename`, `run_s1b`) dan cell **SV-S1b**": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638100410
+      }
+    ],
+    "4.4 Tulis property test untuk klasifikasi nama file": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638100459
+      }
+    ],
+    "4.5 Tulis property test untuk Source_Group dan flag lintas split": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638100510
+      }
+    ],
+    "4.6 Tambah cell **S1c** (`run_s1c`): antrian Spot_Check": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638100562
+      }
+    ],
+    "4.7 Tambah cell **S1d** (`sl_gold_status`, `run_s1d`)": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638100610
+      }
+    ],
+    "4.8 Tulis property test untuk status Gold_Set": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638100659
+      }
+    ],
+    "5. [MANUSIA] Checkpoint S1: Spot_Check Gold_Set": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638100709
+      }
+    ],
+    "6.1 Tambah cell markdown S2 + cell **S2a** (`run_s2a`)": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638100790
+      }
+    ],
+    "6.2 Tambah cell **S2b** (`sl_select_seeds`, `run_s2b`)": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638100860
+      }
+    ],
+    "6.3 Tulis property test untuk seed cluster": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638100908
+      }
+    ],
+    "7. [MANUSIA] Checkpoint S2: tinjau cluster": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638100953
+      }
+    ],
+    "8.1 Tambah cell markdown S3 + cell **S3a** (`sl_proto`, `sl_scores`, `run_s3a`)": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638101001
+      }
+    ],
+    "8.2 Tulis property test untuk prototype dan skor": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638101054
+      }
+    ],
+    "8.3 Tambah cell **S3b** (`run_s3b`): uji kesetaraan 32 gambar": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638101110
+      }
+    ],
+    "8.4 Tambah cell **S3c** (`sl_softmax_masked`, `sl_decide_constrained`, `sl_calibrate_tau`, `run_s3c`)": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638101161
+      }
+    ],
+    "8.5 Tambah cell **S3d** (`sl_decide_global`, `run_s3d`) dan cell **SV-S3**": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638101208
+      }
+    ],
+    "8.6 Tulis property test untuk keputusan constrained": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638101258
+      }
+    ],
+    "8.7 Tulis property test untuk monotonik τ": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638101307
+      }
+    ],
+    "8.8 Tulis property test untuk flag cek kategori global": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638101358
+      }
+    ],
+    "8.9 Tulis property test untuk isi dan urutan Cek_Kategori_Table": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638101414
+      }
+    ],
+    "8.10 Tulis property test untuk kalibrasi τ": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638101476
+      }
+    ],
+    "9. [MANUSIA] Checkpoint S3: jalankan zero-shot di Colab": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638101536
+      }
+    ],
+    "10.1 Tambah cell markdown S4 + cell **S4-core** (`sl_resolve`, `sl_propagate`, `sl_rebuild_verified`, `sl_compose`)": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638101591
+      }
+    ],
+    "10.2 Tulis property test untuk prioritas sumber": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638101644
+      }
+    ],
+    "10.3 Tulis property test untuk propagasi label ke view": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638101694
+      }
+    ],
+    "10.4 Tulis property test untuk Verified_Label idempoten": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638101743
+      }
+    ],
+    "10.5 Tulis property test untuk integritas Sublabel_Table": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638101798
+      }
+    ],
+    "10.6 Tambah cell **S4a** (`sl_select_al`, `run_s4a(n)`)": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638101861
+      }
+    ],
+    "10.7 Tulis property test untuk sampling antrian": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638101916
+      }
+    ],
+    "10.8 Tambah cell **S4b** (`sl_al_precision`, `sl_al_done`, `run_s4b(n)`)": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638101973
+      }
+    ],
+    "10.9 Tulis property test untuk precision AL": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638102073
+      }
+    ],
+    "10.10 Tulis property test untuk kriteria selesai AL": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638102131
+      }
+    ],
+    "11. [MANUSIA] Checkpoint S4a-b: putaran active learning": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638102187
+      }
+    ],
+    "12.1 Tambah cell **S4c** (`sl_build_eval_queue`, `run_s4c`)": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638102237
+      }
+    ],
+    "12.2 Tambah cell **S4d** (`run_s4d`)": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638102289
+      }
+    ],
+    "12.3 Tulis property test untuk komposisi antrian evaluasi": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638102338
+      }
+    ],
+    "13. [MANUSIA] Checkpoint S4c-d: review Eval_Set_Terverifikasi": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638102387
+      }
+    ],
+    "14.1 Tambah cell markdown S5 + cell **S5a** (`sl_kelas_kecil`, `run_s5a`)": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638102438
+      }
+    ],
+    "14.2 Tambah cell **S5b** (`validate_outputs`) dan cell **SV-S5**": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638102489
+      }
+    ],
+    "14.3 Tulis property test untuk round-trip Sublabel_Table": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638102538
+      }
+    ],
+    "15. [MANUSIA] Checkpoint S5": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638102597
+      }
+    ],
+    "16.1 Tambah cell markdown S6 + cell **S6-core** (helper murni S6)": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638102652
+      }
+    ],
+    "16.2 Tulis property test untuk himpunan training Probe_AL dan Sub_Head": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638102727
+      }
+    ],
+    "16.3 Tulis property test untuk deteksi Kelas_Kecil dan kebijakan": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638102888
+      }
+    ],
+    "16.4 Tulis property test untuk class weight": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638102972
+      }
+    ],
+    "16.5 Tulis property test untuk fold tanpa kebocoran group": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638103041
+      }
+    ],
+    "16.6 Tulis property test untuk metrik hanya dari Eval_Set_Terverifikasi": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638103095
+      }
+    ],
+    "16.7 Tambah cell **S6a** (`run_s6a`): Sub_Head per Kategori": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638103147
+      }
+    ],
+    "16.8 Tambah cell **S6b** (`run_s6b`): Flat_Head 10 kelas": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638103200
+      }
+    ],
+    "16.9 Tambah cell **S6c** (`sl_route_hier`, `sl_sort_comparison`, `sl_b3_turun`, `run_s6c`)": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638103249
+      }
+    ],
+    "16.10 Tulis property test untuk perutean hierarkis": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638103299
+      }
+    ],
+    "16.11 Tulis property test untuk urutan tabel dan `B3_turun`": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638103349
+      }
+    ],
+    "16.12 Tambah cell **S6d** (`run_s6d(name)`): evaluasi test sekali": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638103398
+      }
+    ],
+    "16.13 Tulis property test untuk penjaga pemakaian test": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638103543
+      }
+    ],
+    "17. [MANUSIA] Checkpoint S6: pilih model dari val, evaluasi test sekali": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638103598
+      }
+    ],
+    "18.1 Perbarui `documentation.md`": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638103652
+      }
+    ],
+    "18.2 Perbarui steering `.kiro/steering/solusi-auto-labeling-siglip.md`": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638103702
+      }
+    ],
+    "19. Final checkpoint": [
+      {
+        "executionId": "8d68c490-936c-4128-b553-d5efe5b26caf",
+        "chatSessionId": "sess_a42145f1-401c-4683-9d24-d56ed1ca9c3f",
+        "timestamp": 1791638103760
+      }
+    ]
+  }
+}

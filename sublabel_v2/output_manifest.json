@@ -1,0 +1,17 @@
+{
+  "files": {
+    "sublabels.csv": 28965,
+    "ringkasan_sublabel.csv": 80,
+    "kelas_kecil.csv": 13,
+    "taxonomy.json": true,
+    "gold_status.csv": 264,
+    "zeroshot.csv": 28965,
+    "audit_log.csv": 12109
+  },
+  "n_lainnya": 819,
+  "kelas_kecil": [
+    "B3_Rumah_Tangga",
+    "Minyak_Jelantah",
+    "Plastik_Campuran"
+  ]
+}

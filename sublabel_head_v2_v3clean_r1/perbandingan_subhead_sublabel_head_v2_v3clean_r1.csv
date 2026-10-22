@@ -1,0 +1,10 @@
+model,mode,head,macro_F1_sub,n_eval,n_sublabel_dinilai,minR_B3sub,recall_kat_B3,prec_kat_B3,B3_turun,detik,catatan
+hier_oracle::mlp2,hier_oracle,mlp2,0.9591,2011,8,0.9733,1.0,1.0,False,0.0,oracle: kategori=kebenaran
+hier_e2e::mlp2,hier_e2e,mlp2,0.9559,2011,8,0.9733,0.9975,1.0,False,0.0,e2e: kategori dari head 3-kelas `ens_lintas_model`
+hier_oracle::mlp,hier_oracle,mlp,0.9536,2011,8,0.9733,1.0,1.0,False,0.0,oracle: kategori=kebenaran
+flat::mlp2,flat,mlp2,0.9516,2011,8,0.9691,0.9899,0.9875,False,0.0,flat 10-kelas
+hier_e2e::mlp,hier_e2e,mlp,0.9507,2011,8,0.9733,0.9975,1.0,False,0.0,e2e: kategori dari head 3-kelas `ens_lintas_model`
+flat::mlp,flat,mlp,0.9441,2011,8,0.984,0.9975,0.9778,False,0.0,flat 10-kelas
+hier_oracle::linear,hier_oracle,linear,0.9406,2011,8,0.9733,1.0,1.0,False,0.0,oracle: kategori=kebenaran
+flat::linear,flat,linear,0.9399,2011,8,0.9485,0.9874,0.9704,False,0.0,flat 10-kelas
+hier_e2e::linear,hier_e2e,linear,0.9382,2011,8,0.9733,0.9975,1.0,False,0.0,e2e: kategori dari head 3-kelas `ens_lintas_model`

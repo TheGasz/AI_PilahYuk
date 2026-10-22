@@ -1,0 +1,380 @@
+{
+  "taxonomy_version": "v2",
+  "model_checkpoint": "google/siglip-so400m-patch14-384",
+  "embedding_dir_name": "siglip-so400m-patch14-384_naug_2_2_5_v3clean",
+  "data_version": "v3clean",
+  "params": {
+    "SPOTCHECK_N": 50,
+    "GOLD_MIN_PRECISION": 0.95,
+    "TARGET_PRECISION": 0.9,
+    "SEED_TOP_N": 16,
+    "AL_N_UNCERTAIN": 20,
+    "AL_N_RANDOM": 20,
+    "AL_N_FALLBACK": 20,
+    "AL_MAX_ROUNDS": 3,
+    "EVAL_N_PER_SUBLABEL": 300,
+    "MIN_TRAIN_SUBHEAD": 30,
+    "MIN_EVAL_SUBLABEL": 20,
+    "NEAR_DUP_COS": 0.97,
+    "SEED": 42
+  },
+  "tau_global": {
+    "nilai": 0.5,
+    "status": "default"
+  },
+  "kategori": {
+    "Recylable": {
+      "idx": 0,
+      "k_cluster": 40,
+      "urutan_heuristik": [
+        "Tekstil",
+        "Kertas_Karton",
+        "Minyak_Jelantah",
+        "Plastik_Kemasan",
+        "Plastik_Campuran",
+        "Anorganik_Lainnya"
+      ],
+      "tau_constrained": {
+        "nilai": 0.0,
+        "status": "dikalibrasi",
+        "alasan": "",
+        "precision": 0.9857,
+        "coverage": 1.0,
+        "cakupan_gold": 0.3333
+      },
+      "fallback": {
+        "nama": "lainnya",
+        "dari_user": false,
+        "tindakan_konsumen_pra_buang": "Belum dapat ditentukan secara spesifik; pisahkan dan simpan sementara dengan aman untuk ditinjau manual.",
+        "rute_penyaluran_pengolahan": "Review manual oleh petugas bank sampah / Dinas Lingkungan Hidup untuk penentuan rute yang tepat."
+      }
+    },
+    "Organik": {
+      "idx": 1,
+      "k_cluster": 30,
+      "urutan_heuristik": [
+        "Limbah_Biologis",
+        "Sisa_Makanan",
+        "Sampah_Kebun"
+      ],
+      "tau_constrained": {
+        "nilai": 0.5,
+        "status": "perlu_kalibrasi_ulang",
+        "alasan": "perlu_kalibrasi_ulang",
+        "precision": 0.7,
+        "coverage": 0.5714,
+        "cakupan_gold": 0.3333
+      },
+      "fallback": {
+        "nama": "lainnya",
+        "dari_user": false,
+        "tindakan_konsumen_pra_buang": "Belum dapat ditentukan secara spesifik; pisahkan dan simpan sementara dengan aman untuk ditinjau manual.",
+        "rute_penyaluran_pengolahan": "Review manual oleh petugas bank sampah / Dinas Lingkungan Hidup untuk penentuan rute yang tepat."
+      }
+    },
+    "B3": {
+      "idx": 2,
+      "k_cluster": 30,
+      "urutan_heuristik": [
+        "Baterai",
+        "Medis_Farmasi",
+        "Aerosol_Elektronik",
+        "B3_Rumah_Tangga"
+      ],
+      "tau_constrained": {
+        "nilai": 0.0,
+        "status": "perlu_kalibrasi_ulang",
+        "alasan": "perlu_kalibrasi_ulang",
+        "precision": 1.0,
+        "coverage": 1.0,
+        "cakupan_gold": 0.25
+      },
+      "fallback": {
+        "nama": "lainnya",
+        "dari_user": false,
+        "tindakan_konsumen_pra_buang": "Belum dapat ditentukan secara spesifik; pisahkan dan simpan sementara dengan aman untuk ditinjau manual.",
+        "rute_penyaluran_pengolahan": "Review manual oleh petugas bank sampah / Dinas Lingkungan Hidup untuk penentuan rute yang tepat."
+      }
+    }
+  },
+  "sub_labels": [
+    {
+      "nama": "Tekstil",
+      "kategori": "Recylable",
+      "metode_identifikasi_utama": "Eksplisit (clothes*)",
+      "jumlah_sampel_user": 2556,
+      "penampung_sisa": false,
+      "tindakan_konsumen_pra_buang": "Cuci dan keringkan. Pilah pakaian layak untuk donasi, pakaian/kain rusak dikumpulkan terpisah.",
+      "rute_penyaluran_pengolahan": "Bank Sampah Tekstil / Daur ulang mekanik serat kain (kain majun & peredam suara)",
+      "prompts": [
+        "a photo of old clothes",
+        "a photo of a pile of clothing",
+        "a photo of fabric textile"
+      ],
+      "filename_patterns": [
+        {
+          "id": "rec_tekstil",
+          "regex": "^clothes",
+          "flags": "",
+          "sumber": "gold"
+        }
+      ],
+      "kelas_kecil_policy": "latih"
+    },
+    {
+      "nama": "Kertas_Karton",
+      "kategori": "Recylable",
+      "metode_identifikasi_utama": "Eksplisit (cardboard*)",
+      "jumlah_sampel_user": 75,
+      "penampung_sisa": false,
+      "tindakan_konsumen_pra_buang": "Pastikan kering, bersihkan dari selotip/lem berlebih, lipat/pipihkan untuk menghemat ruang.",
+      "rute_penyaluran_pengolahan": "Bank Sampah / Pabrik bubur kertas (pulping) untuk dicetak ulang menjadi karton/boks",
+      "prompts": [
+        "a photo of a cardboard box",
+        "a photo of waste paper",
+        "a photo of old newspapers"
+      ],
+      "filename_patterns": [
+        {
+          "id": "rec_kertas_karton",
+          "regex": "^cardboard",
+          "flags": "",
+          "sumber": "gold"
+        }
+      ],
+      "kelas_kecil_policy": "latih"
+    },
+    {
+      "nama": "Minyak_Jelantah",
+      "kategori": "Recylable",
+      "metode_identifikasi_utama": "Eksplisit (nama file minyak goreng)",
+      "jumlah_sampel_user": 14,
+      "penampung_sisa": false,
+      "tindakan_konsumen_pra_buang": "Dinginkan minyak, saring ampas sisa makanan, tampung dalam botol plastik/jeriken tertutup rapat.",
+      "rute_penyaluran_pengolahan": "Bank Minyak Jelantah / Drop-point konversi biodiesel dan energi terbarukan",
+      "prompts": [
+        "a photo of used cooking oil",
+        "a photo of dirty frying oil in a pan"
+      ],
+      "filename_patterns": [
+        {
+          "id": "rec_minyak_jelantah",
+          "regex": "(cooking-oil|^Dau_an|-oil-)",
+          "flags": "i",
+          "sumber": "gold"
+        }
+      ],
+      "kelas_kecil_policy": "rule_only"
+    },
+    {
+      "nama": "Plastik_Kemasan",
+      "kategori": "Recylable",
+      "metode_identifikasi_utama": "Kaggle Recyclable standard",
+      "jumlah_sampel_user": 9384,
+      "penampung_sisa": false,
+      "tindakan_konsumen_pra_buang": "Kosongkan cairan, bilas dengan air, lepaskan segel/tutup, dan pipihkan.",
+      "rute_penyaluran_pengolahan": "Bank Sampah / Daur ulang anorganik (peleburan plastik, kaca, atau kaleng logam)",
+      "prompts": [
+        "a photo of plastic packaging",
+        "a photo of a plastic bottle",
+        "a photo of a plastic bag",
+        "a photo of a plastic cup"
+      ],
+      "filename_patterns": [
+        {
+          "id": "rec_plastik_kemasan_R",
+          "regex": "^R_",
+          "flags": "",
+          "sumber": "prior"
+        }
+      ],
+      "kelas_kecil_policy": "latih"
+    },
+    {
+      "nama": "Plastik_Campuran",
+      "kategori": "Recylable",
+      "metode_identifikasi_utama": "Dataset Image anorganik",
+      "jumlah_sampel_user": 222,
+      "penampung_sisa": false,
+      "tindakan_konsumen_pra_buang": "Bilas bersih dari sisa isi, kosongkan cairan, dan remas/pipihkan wadah.",
+      "rute_penyaluran_pengolahan": "Bank Sampah / TPS 3R untuk pemilahan dan pencacahan biji plastik",
+      "prompts": [
+        "a photo of mixed plastic waste",
+        "a photo of assorted plastic items",
+        "a photo of a plastic container"
+      ],
+      "filename_patterns": [
+        {
+          "id": "rec_plastik_campuran",
+          "regex": "^(Image_|images)",
+          "flags": "",
+          "sumber": "prior"
+        }
+      ],
+      "kelas_kecil_policy": "merge:Plastik_Kemasan"
+    },
+    {
+      "nama": "Anorganik_Lainnya",
+      "kategori": "Recylable",
+      "metode_identifikasi_utama": "Anorganik generic",
+      "jumlah_sampel_user": 34,
+      "penampung_sisa": true,
+      "tindakan_konsumen_pra_buang": "Bersihkan dan kelompokkan sesuai jenis material (plastik, kaca, atau logam).",
+      "rute_penyaluran_pengolahan": "Bank Sampah terdekat atau TPS 3R anorganik",
+      "prompts": [
+        "a photo of miscellaneous inorganic trash",
+        "a photo of a glass bottle",
+        "a photo of a metal can"
+      ],
+      "filename_patterns": [],
+      "kelas_kecil_policy": "merge:Plastik_Kemasan"
+    },
+    {
+      "nama": "Limbah_Biologis",
+      "kategori": "Organik",
+      "metode_identifikasi_utama": "Eksplisit (biological*)",
+      "jumlah_sampel_user": 933,
+      "penampung_sisa": false,
+      "tindakan_konsumen_pra_buang": "Kumpulkan secara terpisah dari sampah rumah tangga, hindari kontak langsung bila berpotensi patogen.",
+      "rute_penyaluran_pengolahan": "Kompos taman terkontrol / Lubang resapan biopori anaerobik",
+      "prompts": [
+        "a photo of biological waste",
+        "a photo of rotting fruit and vegetables",
+        "a photo of moldy food"
+      ],
+      "filename_patterns": [
+        {
+          "id": "org_limbah_biologis",
+          "regex": "^biological",
+          "flags": "",
+          "sumber": "gold"
+        }
+      ],
+      "kelas_kecil_policy": "latih"
+    },
+    {
+      "nama": "Sisa_Makanan",
+      "kategori": "Organik",
+      "metode_identifikasi_utama": "Kaggle Organic standard",
+      "jumlah_sampel_user": 12550,
+      "penampung_sisa": false,
+      "tindakan_konsumen_pra_buang": "Tiriskan kuah/air sisa makanan, pisahkan dari bungkus plastik/tusuk gigi.",
+      "rute_penyaluran_pengolahan": "Pengomposan aerobik / Pakan maggot BSF / Kompos rumah tangga",
+      "prompts": [
+        "a photo of leftover food",
+        "a photo of food scraps",
+        "a photo of fruit and vegetable peels"
+      ],
+      "filename_patterns": [
+        {
+          "id": "org_sisa_makanan",
+          "regex": "^(O_|Image_)",
+          "flags": "",
+          "sumber": "prior"
+        }
+      ],
+      "kelas_kecil_policy": "latih"
+    },
+    {
+      "nama": "Sampah_Kebun",
+      "kategori": "Organik",
+      "metode_identifikasi_utama": "Organik serasah/kebun",
+      "jumlah_sampel_user": 17,
+      "penampung_sisa": true,
+      "tindakan_konsumen_pra_buang": "Cacah kasar ranting dan kumpulkan daun kering dalam karung berventilasi.",
+      "rute_penyaluran_pengolahan": "Komposter taman aerobik atau timbun di lubang biopori",
+      "prompts": [
+        "a photo of garden waste",
+        "a photo of fallen leaves",
+        "a photo of dry leaves and branches"
+      ],
+      "filename_patterns": [],
+      "kelas_kecil_policy": "merge:Sisa_Makanan"
+    },
+    {
+      "nama": "Baterai",
+      "kategori": "B3",
+      "metode_identifikasi_utama": "Eksplisit (battery*/baterai*)",
+      "jumlah_sampel_user": 1292,
+      "penampung_sisa": false,
+      "tindakan_konsumen_pra_buang": "Tutup kedua kutub baterai (+/-) dengan selotip isolasi bening untuk mencegah korsleting dan percikan api.",
+      "rute_penyaluran_pengolahan": "Dropbox E-Waste / Kotak limbah B3 kelurahan untuk pemulihan logam berat (hidrometalurgi)",
+      "prompts": [
+        "a photo of a battery",
+        "a photo of used batteries"
+      ],
+      "filename_patterns": [
+        {
+          "id": "b3_baterai",
+          "regex": "^(battery|baterai)",
+          "flags": "",
+          "sumber": "gold"
+        }
+      ],
+      "kelas_kecil_policy": "latih"
+    },
+    {
+      "nama": "Medis_Farmasi",
+      "kategori": "B3",
+      "metode_identifikasi_utama": "Eksplisit (tabletcapsule*)",
+      "jumlah_sampel_user": 497,
+      "penampung_sisa": false,
+      "tindakan_konsumen_pra_buang": "Keluarkan tablet/kapsul dari blister, hancurkan/larutkan sesuai panduan BPOM, rusak kemasannya.",
+      "rute_penyaluran_pengolahan": "Program Drug Take-Back apotek/puskesmas atau drop-box limbah medis berizin (insinerasi)",
+      "prompts": [
+        "a photo of medicine pills",
+        "a photo of tablets and capsules"
+      ],
+      "filename_patterns": [
+        {
+          "id": "b3_medis_farmasi",
+          "regex": "^tabletcapsule",
+          "flags": "",
+          "sumber": "gold"
+        }
+      ],
+      "kelas_kecil_policy": "latih"
+    },
+    {
+      "nama": "Aerosol_Elektronik",
+      "kategori": "B3",
+      "metode_identifikasi_utama": "Eksplisit/Indikasi (trash*/Image*)",
+      "jumlah_sampel_user": 1103,
+      "penampung_sisa": false,
+      "tindakan_konsumen_pra_buang": "Pastikan gas habis di tempat terbuka, jangan ditusuk atau dibakar, bungkus lampu/kabel rapi.",
+      "rute_penyaluran_pengolahan": "Dropbox limbah B3 / Fasilitas penanganan E-Waste kota",
+      "prompts": [
+        "a photo of an aerosol spray can",
+        "a photo of an electronic device",
+        "a photo of a phone charger and cable"
+      ],
+      "filename_patterns": [
+        {
+          "id": "b3_aerosol_elektronik",
+          "regex": "^(trash|Image_)",
+          "flags": "",
+          "sumber": "prior"
+        }
+      ],
+      "kelas_kecil_policy": "latih"
+    },
+    {
+      "nama": "B3_Rumah_Tangga",
+      "kategori": "B3",
+      "metode_identifikasi_utama": "B3 spesifik / residu",
+      "jumlah_sampel_user": 288,
+      "penampung_sisa": true,
+      "tindakan_konsumen_pra_buang": "Simpan dalam wadah asli tertutup rapat, jangan dicampur bahan kimia lain, beri label peringatan.",
+      "rute_penyaluran_pengolahan": "Drop point B3 Dinas Lingkungan Hidup / TPS B3 khusus",
+      "prompts": [
+        "a photo of household hazardous waste",
+        "a photo of a paint can",
+        "a photo of a chemical cleaner bottle",
+        "a photo of a light bulb"
+      ],
+      "filename_patterns": [],
+      "kelas_kecil_policy": "merge:Aerosol_Elektronik"
+    }
+  ],
+  "content_hash": "sha256:aa7c0cfd99c3eb6b3d53eeae1f0e52ca25aef32b4d0026fbc51403dc8650d9e3"
+}

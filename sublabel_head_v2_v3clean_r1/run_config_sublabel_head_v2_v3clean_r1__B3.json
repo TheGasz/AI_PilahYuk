@@ -1,0 +1,16 @@
+{
+  "scope": "B3",
+  "classes": [
+    "Aerosol_Elektronik",
+    "Baterai",
+    "Medis_Farmasi"
+  ],
+  "n_train": 11142,
+  "n_val_verified": 398,
+  "prop_verified": 0.7775982767905224,
+  "class_weight": {
+    "Aerosol_Elektronik": 1.5710659898477157,
+    "Baterai": 0.6923937360178971,
+    "Medis_Farmasi": 1.0878734622144113
+  }
+}

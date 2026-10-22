@@ -1,0 +1,14 @@
+sub_label,kategori,n_train_verified,n_val_verified,kecil,kebijakan,catatan
+Tekstil,Recylable,671,306,False,latih,
+Kertas_Karton,Recylable,674,305,False,latih,
+Minyak_Jelantah,Recylable,8,0,True,rule_only,metrik tidak_reliabel
+Plastik_Kemasan,Recylable,519,271,False,latih,
+Plastik_Campuran,Recylable,0,0,True,merge:Plastik_Kemasan,metrik tidak_reliabel
+Anorganik_Lainnya,Recylable,516,305,False,merge:Plastik_Kemasan,
+Limbah_Biologis,Organik,564,300,False,latih,
+Sisa_Makanan,Organik,1507,431,False,latih,
+Sampah_Kebun,Organik,644,326,False,merge:Sisa_Makanan,
+Baterai,B3,665,187,False,latih,
+Medis_Farmasi,B3,462,114,False,latih,
+Aerosol_Elektronik,B3,404,97,False,latih,
+B3_Rumah_Tangga,B3,0,0,True,merge:Aerosol_Elektronik,metrik tidak_reliabel

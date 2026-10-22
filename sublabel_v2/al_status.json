@@ -1,0 +1,163 @@
+{
+  "rounds": [
+    {
+      "n": 1,
+      "fallback_count": 1116,
+      "precision_random": {
+        "Aerosol_Elektronik": {
+          "n_random": 20,
+          "precision": 1.0
+        },
+        "Anorganik_Lainnya": {
+          "n_random": 20,
+          "precision": 0.8
+        },
+        "Baterai": {
+          "n_random": 20,
+          "precision": 1.0
+        },
+        "Kertas_Karton": {
+          "n_random": 20,
+          "precision": 0.6
+        },
+        "Limbah_Biologis": {
+          "n_random": 20,
+          "precision": 0.85
+        },
+        "Medis_Farmasi": {
+          "n_random": 20,
+          "precision": 1.0
+        },
+        "Plastik_Kemasan": {
+          "n_random": 20,
+          "precision": 0.8
+        },
+        "Sampah_Kebun": {
+          "n_random": 20,
+          "precision": 0.95
+        },
+        "Sisa_Makanan": {
+          "n_random": 20,
+          "precision": 0.9
+        },
+        "Tekstil": {
+          "n_random": 20,
+          "precision": 1.0
+        },
+        "lainnya": {
+          "n_random": 20,
+          "precision": 0.0
+        }
+      }
+    },
+    {
+      "n": 2,
+      "fallback_count": 855,
+      "precision_random": {
+        "Aerosol_Elektronik": {
+          "n_random": 20,
+          "precision": 1.0
+        },
+        "Anorganik_Lainnya": {
+          "n_random": 20,
+          "precision": 0.65
+        },
+        "Baterai": {
+          "n_random": 20,
+          "precision": 1.0
+        },
+        "Kertas_Karton": {
+          "n_random": 20,
+          "precision": 0.9
+        },
+        "Limbah_Biologis": {
+          "n_random": 20,
+          "precision": 0.7
+        },
+        "Medis_Farmasi": {
+          "n_random": 20,
+          "precision": 0.95
+        },
+        "Plastik_Kemasan": {
+          "n_random": 20,
+          "precision": 0.8
+        },
+        "Sampah_Kebun": {
+          "n_random": 20,
+          "precision": 0.85
+        },
+        "Sisa_Makanan": {
+          "n_random": 20,
+          "precision": 0.95
+        },
+        "Tekstil": {
+          "n_random": 20,
+          "precision": 1.0
+        },
+        "lainnya": {
+          "n_random": 20,
+          "precision": 0.0
+        }
+      }
+    },
+    {
+      "n": 3,
+      "fallback_count": 677,
+      "precision_random": {
+        "Aerosol_Elektronik": {
+          "n_random": 20,
+          "precision": 1.0
+        },
+        "Anorganik_Lainnya": {
+          "n_random": 20,
+          "precision": 0.9
+        },
+        "Baterai": {
+          "n_random": 20,
+          "precision": 1.0
+        },
+        "Kertas_Karton": {
+          "n_random": 20,
+          "precision": 0.8
+        },
+        "Limbah_Biologis": {
+          "n_random": 20,
+          "precision": 0.8
+        },
+        "Medis_Farmasi": {
+          "n_random": 20,
+          "precision": 1.0
+        },
+        "Plastik_Kemasan": {
+          "n_random": 20,
+          "precision": 0.7
+        },
+        "Sampah_Kebun": {
+          "n_random": 20,
+          "precision": 0.85
+        },
+        "Sisa_Makanan": {
+          "n_random": 20,
+          "precision": 1.0
+        },
+        "Tekstil": {
+          "n_random": 20,
+          "precision": 1.0
+        },
+        "lainnya": {
+          "n_random": 20,
+          "precision": 0.0
+        }
+      }
+    }
+  ],
+  "selesai": false,
+  "belum_memenuhi": [
+    "Kertas_Karton",
+    "Limbah_Biologis",
+    "Plastik_Kemasan",
+    "Sampah_Kebun",
+    "lainnya"
+  ],
+  "kelas_kecil": []
+}
