@@ -1,0 +1,7 @@
+{
+  "n": 32,
+  "max_abs_diff": 0.041706085205078125,
+  "lolos": true,
+  "equiv_warn": 0.5,
+  "equiv_fail": 5.0
+}

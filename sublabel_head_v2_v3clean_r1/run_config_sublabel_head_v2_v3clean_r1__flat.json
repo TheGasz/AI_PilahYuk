@@ -1,0 +1,26 @@
+{
+  "scope": "flat",
+  "classes": [
+    "Aerosol_Elektronik",
+    "Baterai",
+    "Kertas_Karton",
+    "Limbah_Biologis",
+    "Medis_Farmasi",
+    "Plastik_Kemasan",
+    "Sisa_Makanan",
+    "Tekstil"
+  ],
+  "n_train": 60993,
+  "n_val_verified": 2011,
+  "prop_verified": 0.34627043412363323,
+  "class_weight": {
+    "Aerosol_Elektronik": 3.2250951776649748,
+    "Baterai": 1.4213506711409396,
+    "Kertas_Karton": 0.7868034055727554,
+    "Limbah_Biologis": 2.344441881918819,
+    "Medis_Farmasi": 2.2331942003514937,
+    "Plastik_Kemasan": 0.74680429033206,
+    "Sisa_Makanan": 0.3570349817364428,
+    "Tekstil": 1.4261363636363635
+  }
+}

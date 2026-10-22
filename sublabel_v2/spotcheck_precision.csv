@@ -1,0 +1,7 @@
+sub_label,n,n_ok,precision,lolos
+Baterai,50,44,0.88,False
+Kertas_Karton,50,50,1.0,True
+Limbah_Biologis,50,50,1.0,True
+Medis_Farmasi,50,48,0.96,True
+Minyak_Jelantah,14,11,0.7857,False
+Tekstil,50,50,1.0,True

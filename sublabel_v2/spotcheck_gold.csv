@@ -1,0 +1,265 @@
+no,path,split,orig_idx,kategori,sub_label_gold,source_group,keputusan
+1,2_B3/baterai_41.jpg,train,4825,B3,Baterai,baterai_41.jpg,ok
+2,2_B3/baterai_47.jpg,train,15280,B3,Baterai,baterai_47.jpg,ok
+3,2_B3/baterai_69.jpg,train,4595,B3,Baterai,baterai_69.jpg,ok
+4,2_B3/baterai_72.jpg,val,2107,B3,Baterai,baterai_72.jpg,ok
+5,2_B3/baterai_8.jpg,train,142,B3,Baterai,baterai_8.jpg,ok
+6,2_B3/battery (122).jpg,train,20258,B3,Baterai,battery (122).jpg,ok
+7,2_B3/battery (17).jpg,train,16349,B3,Baterai,battery (17).jpg,ok
+8,2_B3/battery (188).jpg,train,10966,B3,Baterai,battery (188).jpg,Aerosol_Elektronik
+9,2_B3/battery (207).jpg,train,7882,B3,Baterai,battery (207).jpg,ok
+10,2_B3/battery (240).jpg,train,1640,B3,Baterai,battery (240).jpg,ok
+11,2_B3/battery (333).jpg,test,3514,B3,Baterai,battery (333).jpg,ok
+12,2_B3/battery141.jpg,train,2054,B3,Baterai,battery141.jpg,ok
+13,2_B3/battery155.jpg,train,14981,B3,Baterai,battery155.jpg,ok
+14,2_B3/battery198.jpg,train,14007,B3,Baterai,battery198.jpg,ok
+15,2_B3/battery227.jpg,train,9749,B3,Baterai,battery227.jpg,ok
+16,2_B3/battery235.jpg,train,499,B3,Baterai,battery235.jpg,ok
+17,2_B3/battery252.jpg,val,1413,B3,Baterai,battery252.jpg,ok
+18,2_B3/battery257.jpg,train,724,B3,Baterai,battery257.jpg,ok
+19,2_B3/battery261.jpg,train,14271,B3,Baterai,battery261.jpg,ok
+20,2_B3/battery262.jpg,train,16452,B3,Baterai,battery262.jpg,ok
+21,2_B3/battery32.jpg,train,18477,B3,Baterai,battery32.jpg,ok
+22,2_B3/battery336.jpg,train,6755,B3,Baterai,battery336.jpg,ok
+23,2_B3/battery349.jpg,test,3127,B3,Baterai,battery349.jpg,ok
+24,2_B3/battery382.jpg,train,9264,B3,Baterai,battery382.jpg,ok
+25,2_B3/battery395.jpg,train,1715,B3,Baterai,battery395.jpg,ok
+26,2_B3/battery498.jpg,train,2270,B3,Baterai,battery498.jpg,ok
+27,2_B3/battery502.jpg,train,8845,B3,Baterai,battery502.jpg,Aerosol_Elektronik
+28,2_B3/battery504.jpg,train,2479,B3,Baterai,battery504.jpg,ok
+29,2_B3/battery555.jpg,train,15912,B3,Baterai,battery555.jpg,ok
+30,2_B3/battery559.jpg,train,7929,B3,Baterai,battery559.jpg,ok
+31,2_B3/battery584.jpg,train,6237,B3,Baterai,battery584.jpg,ok
+32,2_B3/battery585.jpg,train,4957,B3,Baterai,battery585.jpg,ok
+33,2_B3/battery604.jpg,train,1012,B3,Baterai,battery604.jpg,ok
+34,2_B3/battery635.jpg,train,19972,B3,Baterai,battery635.jpg,ok
+35,2_B3/battery641.jpg,train,5994,B3,Baterai,battery641.jpg,ok
+36,2_B3/battery652.jpg,train,2430,B3,Baterai,battery652.jpg,ok
+37,2_B3/battery668.jpg,test,2884,B3,Baterai,battery668.jpg,ok
+38,2_B3/battery67.jpg,train,1063,B3,Baterai,battery67.jpg,ok
+39,2_B3/battery683.jpg,val,1811,B3,Baterai,battery683.jpg,ok
+40,2_B3/battery719.jpg,train,15413,B3,Baterai,battery719.jpg,Aerosol_Elektronik
+41,2_B3/battery732.jpg,val,680,B3,Baterai,battery732.jpg,Aerosol_Elektronik
+42,2_B3/battery733.jpg,train,7328,B3,Baterai,battery733.jpg,Aerosol_Elektronik
+43,2_B3/battery744.jpg,val,3813,B3,Baterai,battery744.jpg,Aerosol_Elektronik
+44,2_B3/battery769.jpg,test,2281,B3,Baterai,battery769.jpg,ok
+45,2_B3/battery805.jpg,test,964,B3,Baterai,battery805.jpg,ok
+46,2_B3/battery823.jpg,train,6812,B3,Baterai,battery823.jpg,ok
+47,2_B3/battery844.jpg,train,4376,B3,Baterai,battery844.jpg,ok
+48,2_B3/battery89.jpg,train,14695,B3,Baterai,battery89.jpg,ok
+49,2_B3/battery914.jpg,train,17397,B3,Baterai,battery914.jpg,ok
+50,2_B3/battery937.jpg,train,3461,B3,Baterai,battery937.jpg,ok
+1,0_Recylable/cardboard816.jpg,train,5104,Recylable,Kertas_Karton,cardboard816.jpg,ok
+2,0_Recylable/cardboard817.jpg,train,17959,Recylable,Kertas_Karton,cardboard817.jpg,ok
+3,0_Recylable/cardboard818.jpg,train,9831,Recylable,Kertas_Karton,cardboard818.jpg,ok
+4,0_Recylable/cardboard819.jpg,train,18394,Recylable,Kertas_Karton,cardboard819.jpg,ok
+5,0_Recylable/cardboard820.jpg,train,14588,Recylable,Kertas_Karton,cardboard820.jpg,ok
+6,0_Recylable/cardboard821.jpg,train,3692,Recylable,Kertas_Karton,cardboard821.jpg,ok
+7,0_Recylable/cardboard822.jpg,train,16472,Recylable,Kertas_Karton,cardboard822.jpg,ok
+8,0_Recylable/cardboard826.jpg,train,6751,Recylable,Kertas_Karton,cardboard826.jpg,ok
+9,0_Recylable/cardboard827.jpg,train,3312,Recylable,Kertas_Karton,cardboard827.jpg,ok
+10,0_Recylable/cardboard830.jpg,train,18007,Recylable,Kertas_Karton,cardboard830.jpg,ok
+11,0_Recylable/cardboard832.jpg,train,15383,Recylable,Kertas_Karton,cardboard832.jpg,ok
+12,0_Recylable/cardboard833.jpg,train,17433,Recylable,Kertas_Karton,cardboard833.jpg,ok
+13,0_Recylable/cardboard834.jpg,val,992,Recylable,Kertas_Karton,cardboard834.jpg,ok
+14,0_Recylable/cardboard835.jpg,train,8793,Recylable,Kertas_Karton,cardboard835.jpg,ok
+15,0_Recylable/cardboard836.jpg,train,2461,Recylable,Kertas_Karton,cardboard836.jpg,ok
+16,0_Recylable/cardboard837.jpg,val,3526,Recylable,Kertas_Karton,cardboard837.jpg,ok
+17,0_Recylable/cardboard838.jpg,train,7432,Recylable,Kertas_Karton,cardboard838.jpg,ok
+18,0_Recylable/cardboard839.jpg,train,9319,Recylable,Kertas_Karton,cardboard839.jpg,ok
+19,0_Recylable/cardboard840.jpg,train,13932,Recylable,Kertas_Karton,cardboard840.jpg,ok
+20,0_Recylable/cardboard841.jpg,test,526,Recylable,Kertas_Karton,cardboard841.jpg,ok
+21,0_Recylable/cardboard845.jpg,train,12865,Recylable,Kertas_Karton,cardboard845.jpg,ok
+22,0_Recylable/cardboard846.jpg,train,3368,Recylable,Kertas_Karton,cardboard846.jpg,ok
+23,0_Recylable/cardboard848.jpg,val,1701,Recylable,Kertas_Karton,cardboard848.jpg,ok
+24,0_Recylable/cardboard849.jpg,train,248,Recylable,Kertas_Karton,cardboard849.jpg,ok
+25,0_Recylable/cardboard850.jpg,train,12761,Recylable,Kertas_Karton,cardboard850.jpg,ok
+26,0_Recylable/cardboard852.jpg,train,9573,Recylable,Kertas_Karton,cardboard852.jpg,ok
+27,0_Recylable/cardboard854.jpg,train,19779,Recylable,Kertas_Karton,cardboard854.jpg,ok
+28,0_Recylable/cardboard858.jpg,val,3563,Recylable,Kertas_Karton,cardboard858.jpg,ok
+29,0_Recylable/cardboard860.jpg,val,2207,Recylable,Kertas_Karton,cardboard860.jpg,ok
+30,0_Recylable/cardboard862.jpg,test,3597,Recylable,Kertas_Karton,cardboard862.jpg,ok
+31,0_Recylable/cardboard863.jpg,train,8373,Recylable,Kertas_Karton,cardboard863.jpg,ok
+32,0_Recylable/cardboard864.jpg,train,17308,Recylable,Kertas_Karton,cardboard864.jpg,ok
+33,0_Recylable/cardboard865.jpg,train,11827,Recylable,Kertas_Karton,cardboard865.jpg,ok
+34,0_Recylable/cardboard866.jpg,val,3003,Recylable,Kertas_Karton,cardboard866.jpg,ok
+35,0_Recylable/cardboard868.jpg,train,9676,Recylable,Kertas_Karton,cardboard868.jpg,ok
+36,0_Recylable/cardboard870.jpg,val,633,Recylable,Kertas_Karton,cardboard870.jpg,ok
+37,0_Recylable/cardboard872.jpg,val,1403,Recylable,Kertas_Karton,cardboard872.jpg,ok
+38,0_Recylable/cardboard873.jpg,test,414,Recylable,Kertas_Karton,cardboard873.jpg,ok
+39,0_Recylable/cardboard874.jpg,val,4255,Recylable,Kertas_Karton,cardboard874.jpg,ok
+40,0_Recylable/cardboard875.jpg,val,2865,Recylable,Kertas_Karton,cardboard875.jpg,ok
+41,0_Recylable/cardboard876.jpg,test,2932,Recylable,Kertas_Karton,cardboard876.jpg,ok
+42,0_Recylable/cardboard877.jpg,val,4142,Recylable,Kertas_Karton,cardboard877.jpg,ok
+43,0_Recylable/cardboard878.jpg,train,13741,Recylable,Kertas_Karton,cardboard878.jpg,ok
+44,0_Recylable/cardboard880.jpg,train,6602,Recylable,Kertas_Karton,cardboard880.jpg,ok
+45,0_Recylable/cardboard881.jpg,train,4977,Recylable,Kertas_Karton,cardboard881.jpg,ok
+46,0_Recylable/cardboard882.jpg,train,17038,Recylable,Kertas_Karton,cardboard882.jpg,ok
+47,0_Recylable/cardboard886.jpg,train,18813,Recylable,Kertas_Karton,cardboard886.jpg,ok
+48,0_Recylable/cardboard887.jpg,train,7379,Recylable,Kertas_Karton,cardboard887.jpg,ok
+49,0_Recylable/cardboard888.jpg,train,3945,Recylable,Kertas_Karton,cardboard888.jpg,ok
+50,0_Recylable/cardboard891.jpg,train,1797,Recylable,Kertas_Karton,cardboard891.jpg,ok
+1,1_Organik/biological114.jpg,train,19747,Organik,Limbah_Biologis,biological114.jpg,ok
+2,1_Organik/biological165.jpg,train,15299,Organik,Limbah_Biologis,biological165.jpg,ok
+3,1_Organik/biological171.jpg,train,16678,Organik,Limbah_Biologis,biological171.jpg,ok
+4,1_Organik/biological18.jpg,train,16997,Organik,Limbah_Biologis,biological18.jpg,ok
+5,1_Organik/biological204.jpg,train,3800,Organik,Limbah_Biologis,biological204.jpg,ok
+6,1_Organik/biological217.jpg,val,2863,Organik,Limbah_Biologis,biological217.jpg,ok
+7,1_Organik/biological246.jpg,test,2462,Organik,Limbah_Biologis,biological246.jpg,ok
+8,1_Organik/biological266.jpg,train,10233,Organik,Limbah_Biologis,biological266.jpg,ok
+9,1_Organik/biological315.jpg,train,6512,Organik,Limbah_Biologis,biological315.jpg,ok
+10,1_Organik/biological317.jpg,train,6805,Organik,Limbah_Biologis,biological317.jpg,ok
+11,1_Organik/biological318.jpg,train,12034,Organik,Limbah_Biologis,biological318.jpg,ok
+12,1_Organik/biological327.jpg,val,1392,Organik,Limbah_Biologis,biological327.jpg,ok
+13,1_Organik/biological365.jpg,train,17121,Organik,Limbah_Biologis,biological365.jpg,ok
+14,1_Organik/biological375.jpg,train,16685,Organik,Limbah_Biologis,biological375.jpg,ok
+15,1_Organik/biological390.jpg,train,6203,Organik,Limbah_Biologis,biological390.jpg,ok
+16,1_Organik/biological42.jpg,train,10462,Organik,Limbah_Biologis,biological42.jpg,ok
+17,1_Organik/biological478.jpg,val,2288,Organik,Limbah_Biologis,biological478.jpg,ok
+18,1_Organik/biological488.jpg,train,17483,Organik,Limbah_Biologis,biological488.jpg,ok
+19,1_Organik/biological492.jpg,train,9701,Organik,Limbah_Biologis,biological492.jpg,ok
+20,1_Organik/biological493.jpg,test,824,Organik,Limbah_Biologis,biological493.jpg,ok
+21,1_Organik/biological497.jpg,train,5211,Organik,Limbah_Biologis,biological497.jpg,ok
+22,1_Organik/biological501.jpg,train,10907,Organik,Limbah_Biologis,biological501.jpg,ok
+23,1_Organik/biological512.jpg,test,353,Organik,Limbah_Biologis,biological512.jpg,ok
+24,1_Organik/biological528.jpg,train,5752,Organik,Limbah_Biologis,biological528.jpg,ok
+25,1_Organik/biological540.jpg,train,6094,Organik,Limbah_Biologis,biological540.jpg,ok
+26,1_Organik/biological583.jpg,train,16579,Organik,Limbah_Biologis,biological583.jpg,ok
+27,1_Organik/biological61.jpg,test,911,Organik,Limbah_Biologis,biological61.jpg,ok
+28,1_Organik/biological621.jpg,train,16410,Organik,Limbah_Biologis,biological621.jpg,ok
+29,1_Organik/biological657.jpg,train,10298,Organik,Limbah_Biologis,biological657.jpg,ok
+30,1_Organik/biological660.jpg,train,18406,Organik,Limbah_Biologis,biological660.jpg,ok
+31,1_Organik/biological679.jpg,train,25,Organik,Limbah_Biologis,biological679.jpg,ok
+32,1_Organik/biological686.jpg,test,2448,Organik,Limbah_Biologis,biological686.jpg,ok
+33,1_Organik/biological696.jpg,train,6264,Organik,Limbah_Biologis,biological696.jpg,ok
+34,1_Organik/biological710.jpg,train,16572,Organik,Limbah_Biologis,biological710.jpg,ok
+35,1_Organik/biological715.jpg,test,2539,Organik,Limbah_Biologis,biological715.jpg,ok
+36,1_Organik/biological73.jpg,train,3668,Organik,Limbah_Biologis,biological73.jpg,ok
+37,1_Organik/biological736.jpg,val,3938,Organik,Limbah_Biologis,biological736.jpg,ok
+38,1_Organik/biological737.jpg,val,1441,Organik,Limbah_Biologis,biological737.jpg,ok
+39,1_Organik/biological753.jpg,test,3376,Organik,Limbah_Biologis,biological753.jpg,ok
+40,1_Organik/biological767.jpg,train,12053,Organik,Limbah_Biologis,biological767.jpg,ok
+41,1_Organik/biological768.jpg,train,9762,Organik,Limbah_Biologis,biological768.jpg,ok
+42,1_Organik/biological775.jpg,train,11330,Organik,Limbah_Biologis,biological775.jpg,ok
+43,1_Organik/biological778.jpg,val,2176,Organik,Limbah_Biologis,biological778.jpg,ok
+44,1_Organik/biological805.jpg,train,3905,Organik,Limbah_Biologis,biological805.jpg,ok
+45,1_Organik/biological851.jpg,test,324,Organik,Limbah_Biologis,biological851.jpg,ok
+46,1_Organik/biological870.jpg,train,16450,Organik,Limbah_Biologis,biological870.jpg,ok
+47,1_Organik/biological880.jpg,train,12133,Organik,Limbah_Biologis,biological880.jpg,ok
+48,1_Organik/biological911.jpg,train,2695,Organik,Limbah_Biologis,biological911.jpg,ok
+49,1_Organik/biological925.jpg,val,2380,Organik,Limbah_Biologis,biological925.jpg,ok
+50,1_Organik/biological981.jpg,train,16434,Organik,Limbah_Biologis,biological981.jpg,ok
+1,2_B3/tabletcapsule (102).jpg,train,1698,B3,Medis_Farmasi,tabletcapsule (102).jpg,ok
+2,2_B3/tabletcapsule (107).jpg,val,232,B3,Medis_Farmasi,tabletcapsule (107).jpg,ok
+3,2_B3/tabletcapsule (114).jpg,train,9551,B3,Medis_Farmasi,tabletcapsule (114).jpg,ok
+4,2_B3/tabletcapsule (143).jpg,test,14,B3,Medis_Farmasi,tabletcapsule (143).jpg,ok
+5,2_B3/tabletcapsule (144).jpg,train,20051,B3,Medis_Farmasi,tabletcapsule (144).jpg,ok
+6,2_B3/tabletcapsule (149).jpg,train,3525,B3,Medis_Farmasi,tabletcapsule (149).jpg,ok
+7,2_B3/tabletcapsule (156).jpg,test,332,B3,Medis_Farmasi,tabletcapsule (156).jpg,ok
+8,2_B3/tabletcapsule (16).jpg,train,11421,B3,Medis_Farmasi,tabletcapsule (16).jpg,lainnya
+9,2_B3/tabletcapsule (189).jpg,train,8046,B3,Medis_Farmasi,tabletcapsule (189).jpg,ok
+10,2_B3/tabletcapsule (198).jpg,train,12054,B3,Medis_Farmasi,tabletcapsule (198).jpg,ok
+11,2_B3/tabletcapsule (200).jpg,train,4785,B3,Medis_Farmasi,tabletcapsule (200).jpg,ok
+12,2_B3/tabletcapsule (201).jpg,train,7933,B3,Medis_Farmasi,tabletcapsule (201).jpg,ok
+13,2_B3/tabletcapsule (213).jpg,train,4179,B3,Medis_Farmasi,tabletcapsule (213).jpg,ok
+14,2_B3/tabletcapsule (214).jpg,val,2251,B3,Medis_Farmasi,tabletcapsule (214).jpg,ok
+15,2_B3/tabletcapsule (217).jpg,test,415,B3,Medis_Farmasi,tabletcapsule (217).jpg,ok
+16,2_B3/tabletcapsule (224).jpg,train,17255,B3,Medis_Farmasi,tabletcapsule (224).jpg,ok
+17,2_B3/tabletcapsule (229).jpg,train,16560,B3,Medis_Farmasi,tabletcapsule (229).jpg,ok
+18,2_B3/tabletcapsule (23).jpg,test,2246,B3,Medis_Farmasi,tabletcapsule (23).jpg,ok
+19,2_B3/tabletcapsule (234).jpg,train,17047,B3,Medis_Farmasi,tabletcapsule (234).jpg,ok
+20,2_B3/tabletcapsule (236).jpg,train,11097,B3,Medis_Farmasi,tabletcapsule (236).jpg,ok
+21,2_B3/tabletcapsule (239).jpg,train,19949,B3,Medis_Farmasi,tabletcapsule (239).jpg,ok
+22,2_B3/tabletcapsule (248).jpg,train,7132,B3,Medis_Farmasi,tabletcapsule (248).jpg,ok
+23,2_B3/tabletcapsule (260).jpg,train,15182,B3,Medis_Farmasi,tabletcapsule (260).jpg,ok
+24,2_B3/tabletcapsule (277).jpg,train,17923,B3,Medis_Farmasi,tabletcapsule (277).jpg,ok
+25,2_B3/tabletcapsule (300).jpg,train,1816,B3,Medis_Farmasi,tabletcapsule (300).jpg,ok
+26,2_B3/tabletcapsule (321).jpg,val,1046,B3,Medis_Farmasi,tabletcapsule (321).jpg,ok
+27,2_B3/tabletcapsule (328).jpg,train,8312,B3,Medis_Farmasi,tabletcapsule (328).jpg,ok
+28,2_B3/tabletcapsule (329).jpg,train,3246,B3,Medis_Farmasi,tabletcapsule (329).jpg,ok
+29,2_B3/tabletcapsule (337).jpg,train,5402,B3,Medis_Farmasi,tabletcapsule (337).jpg,ok
+30,2_B3/tabletcapsule (34).jpg,train,666,B3,Medis_Farmasi,tabletcapsule (34).jpg,ok
+31,2_B3/tabletcapsule (362).jpg,train,13221,B3,Medis_Farmasi,tabletcapsule (362).jpg,ok
+32,2_B3/tabletcapsule (377).jpg,test,2772,B3,Medis_Farmasi,tabletcapsule (377).jpg,ok
+33,2_B3/tabletcapsule (378).jpg,train,12458,B3,Medis_Farmasi,tabletcapsule (378).jpg,ok
+34,2_B3/tabletcapsule (380).jpg,train,3727,B3,Medis_Farmasi,tabletcapsule (380).jpg,ok
+35,2_B3/tabletcapsule (381).jpg,test,244,B3,Medis_Farmasi,tabletcapsule (381).jpg,ok
+36,2_B3/tabletcapsule (407).jpg,train,394,B3,Medis_Farmasi,tabletcapsule (407).jpg,ok
+37,2_B3/tabletcapsule (408).jpg,train,6347,B3,Medis_Farmasi,tabletcapsule (408).jpg,cek_kategori
+38,2_B3/tabletcapsule (426).jpg,train,13660,B3,Medis_Farmasi,tabletcapsule (426).jpg,ok
+39,2_B3/tabletcapsule (437).jpg,train,18041,B3,Medis_Farmasi,tabletcapsule (437).jpg,ok
+40,2_B3/tabletcapsule (454).jpg,train,3516,B3,Medis_Farmasi,tabletcapsule (454).jpg,ok
+41,2_B3/tabletcapsule (462).jpg,val,94,B3,Medis_Farmasi,tabletcapsule (462).jpg,ok
+42,2_B3/tabletcapsule (467).jpg,train,6961,B3,Medis_Farmasi,tabletcapsule (467).jpg,ok
+43,2_B3/tabletcapsule (492).jpg,train,16267,B3,Medis_Farmasi,tabletcapsule (492).jpg,ok
+44,2_B3/tabletcapsule (498).jpg,val,3574,B3,Medis_Farmasi,tabletcapsule (498).jpg,ok
+45,2_B3/tabletcapsule (54).jpg,train,3431,B3,Medis_Farmasi,tabletcapsule (54).jpg,ok
+46,2_B3/tabletcapsule (69).jpg,test,3725,B3,Medis_Farmasi,tabletcapsule (69).jpg,ok
+47,2_B3/tabletcapsule (70).jpg,train,13064,B3,Medis_Farmasi,tabletcapsule (70).jpg,ok
+48,2_B3/tabletcapsule (71).jpg,train,15974,B3,Medis_Farmasi,tabletcapsule (71).jpg,ok
+49,2_B3/tabletcapsule (74).jpg,train,3927,B3,Medis_Farmasi,tabletcapsule (74).jpg,ok
+50,2_B3/tabletcapsule (95).jpg,train,8466,B3,Medis_Farmasi,tabletcapsule (95).jpg,ok
+1,0_Recylable/2020-sti-oil-black-as-shit-for-2k-miles-v0-o6pssvptp5eb1_jpg.rf.1ff2c09be97294313bca253709269b15.jpg,val,637,Recylable,Minyak_Jelantah,2020-sti-oil-black-as-shit-for-2k-miles-v0-o6pssvptp5eb1_jpg,cek_kategori
+2,0_Recylable/2020-sti-oil-black-as-shit-for-2k-miles-v0-o6pssvptp5eb1_jpg.rf.3d65c58980403555d8426e2fb6b2a763.jpg,val,3545,Recylable,Minyak_Jelantah,2020-sti-oil-black-as-shit-for-2k-miles-v0-o6pssvptp5eb1_jpg,cek_kategori
+3,0_Recylable/2020-sti-oil-black-as-shit-for-2k-miles-v0-o6pssvptp5eb1_jpg.rf.ac3ff1bb320237e35d5d960fc45e4d91.jpg,train,2717,Recylable,Minyak_Jelantah,2020-sti-oil-black-as-shit-for-2k-miles-v0-o6pssvptp5eb1_jpg,cek_kategori
+4,0_Recylable/47927659-used-cooking-oil-and-dirty-pan_jpg.rf.2511aeb687378c5bfdfc5d150306afe6.jpg,train,13831,Recylable,Minyak_Jelantah,47927659-used-cooking-oil-and-dirty-pan_jpg,ok
+5,0_Recylable/47927659-used-cooking-oil-and-dirty-pan_jpg.rf.6f2f33764198b0a59e9c10cfd1821d00.jpg,train,8620,Recylable,Minyak_Jelantah,47927659-used-cooking-oil-and-dirty-pan_jpg,ok
+6,0_Recylable/47927659-used-cooking-oil-and-dirty-pan_jpg.rf.b97d092681d7f8c81717c12640f42deb.jpg,train,10813,Recylable,Minyak_Jelantah,47927659-used-cooking-oil-and-dirty-pan_jpg,ok
+7,0_Recylable/Dau_an__1_jpg.rf.10786617c63c1d1e3dfef75462a80cfd.jpg,train,11367,Recylable,Minyak_Jelantah,Dau_an__1_jpg,ok
+8,0_Recylable/Dau_an__1_jpg.rf.bdee1cb0645a8f5e91b7e1ea8e293ea7.jpg,train,18366,Recylable,Minyak_Jelantah,Dau_an__1_jpg,ok
+9,0_Recylable/Dau_an__1_jpg.rf.d5da1d90b706000f851f13227bc2fb93.jpg,train,19935,Recylable,Minyak_Jelantah,Dau_an__1_jpg,ok
+10,0_Recylable/disadvantages-of-reusing-cooking-oil-Southern-Green_jpeg.rf.4fe95dc404dd084e2d5cf172f3caaa97.jpg,test,3166,Recylable,Minyak_Jelantah,disadvantages-of-reusing-cooking-oil-Southern-Green_jpeg,ok
+11,0_Recylable/disadvantages-of-reusing-cooking-oil-Southern-Green_jpeg.rf.f8486efb3d7e3d337767d2773ceaa613.jpg,train,16942,Recylable,Minyak_Jelantah,disadvantages-of-reusing-cooking-oil-Southern-Green_jpeg,ok
+12,0_Recylable/minnesota-cooking-deep-fryer-oil-changing_jpg.rf.d51e62e72af1cac327319e8eb2841528.jpg,train,13354,Recylable,Minyak_Jelantah,minnesota-cooking-deep-fryer-oil-changing_jpg,ok
+13,0_Recylable/minnesota-cooking-deep-fryer-oil-changing_jpg.rf.f9085209a47e70c235ac5ea922826359.jpg,train,13705,Recylable,Minyak_Jelantah,minnesota-cooking-deep-fryer-oil-changing_jpg,ok
+14,0_Recylable/old-used-cooking-oil-look-like-black-brown-color-dirty-iron-pan-carcinogenic-food-to-cause-cancer-unhealthy-lifestyle-227648215_webp.rf.f4b07dfb20d222fc2d957c412850c151.jpg,train,16411,Recylable,Minyak_Jelantah,old-used-cooking-oil-look-like-black-brown-color-dirty-iron-pan-carcinogenic-food-to-cause-cancer-unhealthy-lifestyle-227648215_webp,ok
+1,0_Recylable/clothes1026.jpg,val,378,Recylable,Tekstil,clothes1026.jpg,ok
+2,0_Recylable/clothes1119.jpg,train,15224,Recylable,Tekstil,clothes1119.jpg,ok
+3,0_Recylable/clothes138.jpg,test,728,Recylable,Tekstil,clothes138.jpg,ok
+4,0_Recylable/clothes1395.jpg,val,96,Recylable,Tekstil,clothes1395.jpg,ok
+5,0_Recylable/clothes1503.jpg,train,13198,Recylable,Tekstil,clothes1503.jpg,ok
+6,0_Recylable/clothes1583.jpg,train,14318,Recylable,Tekstil,clothes1583.jpg,ok
+7,0_Recylable/clothes1616.jpg,train,4122,Recylable,Tekstil,clothes1616.jpg,ok
+8,0_Recylable/clothes162.jpg,test,388,Recylable,Tekstil,clothes162.jpg,ok
+9,0_Recylable/clothes1666.jpg,train,11196,Recylable,Tekstil,clothes1666.jpg,ok
+10,0_Recylable/clothes17.jpg,train,2561,Recylable,Tekstil,clothes17.jpg,ok
+11,0_Recylable/clothes1793.jpg,train,1368,Recylable,Tekstil,clothes1793.jpg,ok
+12,0_Recylable/clothes1871.jpg,train,850,Recylable,Tekstil,clothes1871.jpg,ok
+13,0_Recylable/clothes1938.jpg,train,8726,Recylable,Tekstil,clothes1938.jpg,ok
+14,0_Recylable/clothes2355.jpg,train,15483,Recylable,Tekstil,clothes2355.jpg,ok
+15,0_Recylable/clothes2419.jpg,test,1342,Recylable,Tekstil,clothes2419.jpg,ok
+16,0_Recylable/clothes2482.jpg,train,13033,Recylable,Tekstil,clothes2482.jpg,ok
+17,0_Recylable/clothes287.jpg,train,3084,Recylable,Tekstil,clothes287.jpg,ok
+18,0_Recylable/clothes295.jpg,train,6744,Recylable,Tekstil,clothes295.jpg,ok
+19,0_Recylable/clothes2993.jpg,train,7087,Recylable,Tekstil,clothes2993.jpg,ok
+20,0_Recylable/clothes3039.jpg,test,2118,Recylable,Tekstil,clothes3039.jpg,ok
+21,0_Recylable/clothes3299.jpg,val,203,Recylable,Tekstil,clothes3299.jpg,ok
+22,0_Recylable/clothes3360.jpg,train,6276,Recylable,Tekstil,clothes3360.jpg,ok
+23,0_Recylable/clothes3394.jpg,train,4664,Recylable,Tekstil,clothes3394.jpg,ok
+24,0_Recylable/clothes3459.jpg,train,996,Recylable,Tekstil,clothes3459.jpg,ok
+25,0_Recylable/clothes3633.jpg,train,12927,Recylable,Tekstil,clothes3633.jpg,ok
+26,0_Recylable/clothes3668.jpg,train,19777,Recylable,Tekstil,clothes3668.jpg,ok
+27,0_Recylable/clothes372.jpg,train,12941,Recylable,Tekstil,clothes372.jpg,ok
+28,0_Recylable/clothes3828.jpg,train,10925,Recylable,Tekstil,clothes3828.jpg,ok
+29,0_Recylable/clothes3841.jpg,test,3426,Recylable,Tekstil,clothes3841.jpg,ok
+30,0_Recylable/clothes4002.jpg,test,1951,Recylable,Tekstil,clothes4002.jpg,ok
+31,0_Recylable/clothes4127.jpg,train,1655,Recylable,Tekstil,clothes4127.jpg,ok
+32,0_Recylable/clothes435.jpg,train,13983,Recylable,Tekstil,clothes435.jpg,ok
+33,0_Recylable/clothes4430.jpg,train,10318,Recylable,Tekstil,clothes4430.jpg,ok
+34,0_Recylable/clothes4464.jpg,train,18663,Recylable,Tekstil,clothes4464.jpg,ok
+35,0_Recylable/clothes4512.jpg,test,3477,Recylable,Tekstil,clothes4512.jpg,ok
+36,0_Recylable/clothes455.jpg,train,18857,Recylable,Tekstil,clothes455.jpg,ok
+37,0_Recylable/clothes4577.jpg,train,8586,Recylable,Tekstil,clothes4577.jpg,ok
+38,0_Recylable/clothes476.jpg,train,16262,Recylable,Tekstil,clothes476.jpg,ok
+39,0_Recylable/clothes483.jpg,train,12130,Recylable,Tekstil,clothes483.jpg,ok
+40,0_Recylable/clothes4867.jpg,val,20,Recylable,Tekstil,clothes4867.jpg,ok
+41,0_Recylable/clothes4978.jpg,train,7290,Recylable,Tekstil,clothes4978.jpg,ok
+42,0_Recylable/clothes5042.jpg,val,1116,Recylable,Tekstil,clothes5042.jpg,ok
+43,0_Recylable/clothes596.jpg,train,18039,Recylable,Tekstil,clothes596.jpg,ok
+44,0_Recylable/clothes609.jpg,train,9286,Recylable,Tekstil,clothes609.jpg,ok
+45,0_Recylable/clothes68.jpg,train,16743,Recylable,Tekstil,clothes68.jpg,ok
+46,0_Recylable/clothes750.jpg,val,1325,Recylable,Tekstil,clothes750.jpg,ok
+47,0_Recylable/clothes772.jpg,train,19060,Recylable,Tekstil,clothes772.jpg,ok
+48,0_Recylable/clothes817.jpg,train,10708,Recylable,Tekstil,clothes817.jpg,ok
+49,0_Recylable/clothes830.jpg,train,12546,Recylable,Tekstil,clothes830.jpg,ok
+50,0_Recylable/clothes962.jpg,train,16724,Recylable,Tekstil,clothes962.jpg,ok

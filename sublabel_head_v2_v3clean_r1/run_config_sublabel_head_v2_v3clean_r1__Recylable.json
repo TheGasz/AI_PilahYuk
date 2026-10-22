@@ -1,0 +1,16 @@
+{
+  "scope": "Recylable",
+  "classes": [
+    "Kertas_Karton",
+    "Plastik_Kemasan",
+    "Tekstil"
+  ],
+  "n_train": 25245,
+  "n_val_verified": 882,
+  "prop_verified": 0.27997623291740936,
+  "class_weight": {
+    "Kertas_Karton": 0.868421052631579,
+    "Plastik_Kemasan": 0.8242727005583309,
+    "Tekstil": 1.5740740740740742
+  }
+}
